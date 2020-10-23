@@ -10,9 +10,7 @@ function LandingContainer() {
                 <header className={`${styles.header}`}>
                     Aditya Mitra
                 </header>
-                <nav className={`${styles.navbar}`} id="navbar">
-
-                </nav>
+                <nav className={`${styles.navbar}`} id="navbar" />
             </div>
         </>
     );
