@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import { Text, Heading } from '@chakra-ui/core';
 import styles from './landing.module.css';
 
 function LandingContainer() {
@@ -10,7 +11,10 @@ function LandingContainer() {
                 <header className={`${styles.header}`}>
                     Aditya Mitra
                 </header>
-                <nav className={`${styles.navbar}`} id="navbar" />
+                <nav className={`${styles.navbar}`} id="navbar">
+                    <h1>Projects</h1>
+                    <h1>Mode</h1>
+                </nav>
             </div>
         </>
     );

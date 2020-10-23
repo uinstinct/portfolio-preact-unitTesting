@@ -1,9 +1,24 @@
+@font-face{
+    font-family: "ostrich-regular";
+    src: url("/fonts/ostrich-regular.ttf");
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "ostrich-light";
+    src: url("/fonts/OstrichSans-Light.otf");
+}
+
+@font-face {
+    font-family: "guildof";
+    src: url("/fonts/guildof.ttf");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: guildof;
 }
 
 a {
