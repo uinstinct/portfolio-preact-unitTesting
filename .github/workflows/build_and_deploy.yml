@@ -12,8 +12,10 @@ jobs:
         with:
           persist-credentials: false 
 
-      - name: Install and Build
+      - name: Get Node
         uses: actions/setup-node@v1
+
+      - name: Build and Deploy
         run: |
           npm ci
           npm run deploy
