@@ -1,13 +1,8 @@
-import {useEffect } from 'react';
+import { useEffect } from 'react';
 
 import styles from './landing.module.css';
 
 function LandingContainer() {
-
-    useEffect(() => {
-        const navbar = document.getElementById('navbar');
-        navbar.classList.remove("loading");
-    })
 
     return (
         <>
@@ -15,7 +10,7 @@ function LandingContainer() {
                 <header className={`${styles.header}`}>
                     Aditya Mitra
                 </header>
-                <nav className={`${styles.navbar} ${styles.loading}`} id="navbar">
+                <nav className={`${styles.navbar}`} id="navbar">
 
                 </nav>
             </div>
