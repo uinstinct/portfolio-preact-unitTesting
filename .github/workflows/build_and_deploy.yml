@@ -24,9 +24,9 @@ jobs:
           touch portfolio/.nojekyll
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main
+          BRANCH: gh-pages
           FOLDER: portfolio
           CLEAN: true
