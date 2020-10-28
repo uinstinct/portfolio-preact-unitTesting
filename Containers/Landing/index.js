@@ -1,6 +1,6 @@
 import Header from './header';
+import ModeSwitch from "./modeSwitch";
 
-import { IconButton } from '@chakra-ui/core';
 import styles from "../../styles/landing";
 
 function LandingContainer() {
@@ -14,7 +14,7 @@ function LandingContainer() {
                 <Header />
                 <nav className="navbar" id="navbar">
                     <h1>Projects</h1>
-                    <IconButton isRound="true" variant="ghost" icon="sun" />
+                    <ModeSwitch />
                 </nav>
             </div>
         </>
