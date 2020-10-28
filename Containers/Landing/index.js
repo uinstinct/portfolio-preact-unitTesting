@@ -1,5 +1,7 @@
+import Header from './header';
+
 import { IconButton } from '@chakra-ui/core';
-import styles from "../../styles/landing"
+import styles from "../../styles/landing";
 
 function LandingContainer() {
 
@@ -9,12 +11,10 @@ function LandingContainer() {
                 {styles}
             </style>
             <div className="landingHeader">
-                <header className="header">
-                    AdityaMitra
-                </header>
+                <Header />
                 <nav className="navbar" id="navbar">
                     <h1>Projects</h1>
-                    <IconButton isRound="true" variant="ghost" icon="sun"></IconButton>
+                    <IconButton isRound="true" variant="ghost" icon="sun" />
                 </nav>
             </div>
         </>

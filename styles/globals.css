@@ -14,6 +14,11 @@
     src: url("/fonts/guildof.ttf");
 }
 
+@font-face{
+    font-family: "VampiroOne";
+    src: url("/fonts/VampiroOne.ttf");
+}
+
 * {
     border: 0;
     box-sizing: border-box;
