@@ -1,22 +1,19 @@
+import constants from './constants';
 import Card from "./Card";
+
 function Projects() {
-    const sourceItems = [
-        {
-            imgSrc: "/images/dg.jpg",
-            imgAlt: "no 1",
-            title: "this is 1",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-            imgSrc: "def.png",
-            imgAlt: "second",
-            title: "second 2",
-            description: "2's description"
-        }
-    ];
+    let count = 1;
+    const cards = constants.map((constant, idx) => {
+        const { items } = constant;
+        const sourceItems = items.map(item => {
+            item["id"] = count++;
+            return item;
+        })
+        return <Card key={idx} sourceItems={sourceItems} links={constant.links}/>
+    });
     return (
         <>
-            <Card sourceItems={sourceItems} />
+            {cards}
         </>
     );
 }

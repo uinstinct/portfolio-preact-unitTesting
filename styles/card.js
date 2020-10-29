@@ -42,8 +42,10 @@ export default css`
   flex-direction: row;
   visibility: hidden;
   opacity: 0;
-
-  transition: all ease-in 0.3s;
+}
+.visible{
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (max-width: 768px) {
   .item {
@@ -53,6 +55,19 @@ export default css`
 
 .content {
   padding-right: 25px;
+}
+.visible .content{
+  animation-name: appearContent;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes appearContent{
+  0%{
+    transform: translateX(200px);
+  }
+  100%{
+    transform: translateX(0);
+  }
 }
 @media screen and (max-width: 768px) {
   .content {
@@ -74,8 +89,20 @@ export default css`
   background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
   box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
   border-radius: 20px;
-  transform: translateX(-80px);
   overflow: hidden;
+}
+.visible .imageContainer{
+  animation-name: appearImage;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes appearImage{
+  0%{
+    transform: translateY(200px) translateX(-80px);
+  }
+  100%{
+   transform: translateY(0) translateX(-80px);
+  }
 }
 .imageContainer img {
   width: 100%;
@@ -96,6 +123,15 @@ export default css`
     transform: translateY(-50%);
     width: 90%;
   }
+  @keyframes appearImage{
+  0%{
+    transform: translateX(-200px) translateY(-50%);
+  }
+  100%{
+   transform: translateX(0) translateY(-50%);
+   width: 90%;
+  }
+}
 }
 @media screen and (max-width: 576px) {
   .imageContainer {
@@ -130,22 +166,14 @@ export default css`
 }
 
 .links {
-  display: inline-flex;
-  background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-  padding: 15px 35px;
-  border-radius: 50px;
-  color: #fff;
-  box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
-  text-decoration: none;
-  font-weight: 500;
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
-  letter-spacing: 1px;
-}
-@media screen and (max-width: 576px) {
-  .links {
-    width: 100%;
-  }
+  align-items: center;
 }
 
 .bullets {
