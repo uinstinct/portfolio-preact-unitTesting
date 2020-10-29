@@ -22,6 +22,8 @@ jobs:
           npm ci
           npm run deploy
           touch portfolio/.nojekyll
+        env:
+            NODE_ENV: production
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
