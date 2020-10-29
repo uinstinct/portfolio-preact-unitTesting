@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
-import Landing from "../Containers/Landing/index"
+import Landing from "../Containers/Landing";
+import Card from "../Containers/Projects";
 
 export default function IndexPage() {
     return (
@@ -12,6 +13,7 @@ export default function IndexPage() {
             </Head>
             <div>
                 <Landing />
+                <Card />
             </div>
         </>
     );

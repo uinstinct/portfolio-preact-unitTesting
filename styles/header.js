@@ -58,8 +58,14 @@ export default css`
   margin-left: 5px;
   margin-top: -10px;
   position: absolute;
-  bottom: 13px;
-  right: -12px;
+  bottom: 1rem;
+  right: -1rem;
+}
+@media screen and (max-width:320px){
+  .container .box .title h1 span{
+    right: 3rem;
+    bottom: 1.5rem;
+  }
 }
 .container .box .role {
   width: 100%;
@@ -69,6 +75,12 @@ export default css`
   height: 30px;
   margin-top: 2rem;
 }
+@media screen and (max-width:320px){
+  .container .box .role{
+    margin-top: 6rem;
+  }
+}
+
 .container .box .role .block {
   width: 0%;
   height: inherit;
