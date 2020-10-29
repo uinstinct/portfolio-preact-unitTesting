@@ -12,10 +12,10 @@ function LandingContainer() {
             </style>
             <div className="landingHeader">
                 <Header />
-                <nav className="navbar" id="navbar">
+                {/*<nav className="navbar" id="navbar">
                     <h1>Projects</h1>
                     <ModeSwitch />
-                </nav>
+                </nav>*/}
             </div>
         </>
     );

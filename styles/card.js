@@ -32,10 +32,18 @@ export default css`
   }
 }
 
+.wrapper{
+    position: absolute;
+}
+
 .item {
   display: flex;
   align-items: center;
   flex-direction: row;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all ease-in 0.3s;
 }
 @media screen and (max-width: 768px) {
   .item {
@@ -48,7 +56,7 @@ export default css`
 }
 @media screen and (max-width: 768px) {
   .content {
-    margin-top: -80px;
+    margin-top: -130px;
     text-align: center;
     padding: 0 30px;
   }
@@ -58,16 +66,7 @@ export default css`
     padding: 0;
   }
 }
-.content > * {
-  opacity: 1;
-  transform: translateY(25px);
-  transition: all 0.4s;
-}
 
-.imageContainer {
-  opacity: 1;
-  transition-delay: 1s;
-}
 .imageContainer {
   width: 300px;
   flex-shrink: 0;
@@ -78,25 +77,19 @@ export default css`
   transform: translateX(-80px);
   overflow: hidden;
 }
-.imageContainer:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-  border-radius: 20px;
-  opacity: 0; /*transition this*/
-}
 .imageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 1; /*transition this*/
   border-radius: 20px;
-  transition: all 0.3s;
+
+  font-size: 3rem;
+}
+.imageContainer img:after {
+  content: " ";
+  margin-left: 25%;
+  margin-top: 50%;
 }
 @media screen and (max-width: 768px) {
   .imageContainer {
@@ -128,6 +121,12 @@ export default css`
   color: #4e4a67;
   margin-bottom: 30px;
   line-height: 1.5em;
+  width: 90%;
+}
+@media screen and (max-width: 576px){
+  .description{
+    width: 80%;
+  }
 }
 
 .links {
@@ -152,8 +151,6 @@ export default css`
 .bullets {
   position: absolute;
   right: 1.5rem;
-  top: 50%;
-  bottom: -50%;
   width: 1rem;
   color: blue;
 }
@@ -162,7 +159,7 @@ export default css`
   position: relative;
   height: 50px;
   width: 10px;
-  background: #d9d9d9;
+  background: #0ece47;
   border-radius: 5px;
   display: inline-flex;
   margin: 0 3px;
@@ -171,21 +168,8 @@ export default css`
 .tap:hover {
   background: #cccccc;
 }
-.tap.unchecked {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: -100%;
-  background: linear-gradient(147deg, #f6b323 0%, #f23b26 74%);
-  border-radius: 10px;
-  transform: scaleX(0);
-  transition: transform 0.6s;
-  transform-origin: left;
-}
 
 input[type="radio"] {
-  display: none;
+  display: none !important;
 }
 `;

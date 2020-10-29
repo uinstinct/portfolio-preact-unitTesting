@@ -1,4 +1,7 @@
-@font-face{
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+@font-face {
     font-family: "ostrich-regular";
     src: url("/fonts/ostrich-regular.ttf");
     font-style: normal;
@@ -31,6 +34,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: guildof;
+  overflow-x: hidden;
 }
 
 a {
