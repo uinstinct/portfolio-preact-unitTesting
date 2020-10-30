@@ -5,7 +5,7 @@ export default css`
   width: 95%;
   position: relative;
   max-width: 800px;
-  margin: auto;
+  margin: 2rem auto;
   background: #fff;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   padding: 25px;
@@ -15,6 +15,7 @@ export default css`
 }
 @media screen and (max-width: 992px) {
   .card {
+    margin: 1.5rem auto;
     max-width: 680px;
     height: 400px;
   }
@@ -23,7 +24,7 @@ export default css`
   .card {
     min-height: 500px;
     height: auto;
-    margin: 180px auto;
+    margin: 170px auto;
   }
 }
 @media screen and (max-height: 500px) and (min-width: 992px) {

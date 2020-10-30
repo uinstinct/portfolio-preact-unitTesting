@@ -1,10 +1,9 @@
 import Header from './header';
-import ModeSwitch from "./modeSwitch";
+import Navbar from './navbar';
 
 import styles from "../../styles/landing";
 
 function LandingContainer() {
-
     return (
         <>
             <style jsx>
@@ -12,10 +11,7 @@ function LandingContainer() {
             </style>
             <div className="landingHeader">
                 <Header />
-                {/*<nav className="navbar" id="navbar">
-                    <h1>Projects</h1>
-                    <ModeSwitch />
-                </nav>*/}
+                <Navbar />
             </div>
         </>
     );
