@@ -59,15 +59,18 @@ export default css`
 }
 .visible .content{
   animation-name: appearContent;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
 @keyframes appearContent{
   0%{
     transform: translateX(200px);
+    opacity: 0;
   }
   100%{
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @media screen and (max-width: 768px) {
@@ -94,21 +97,23 @@ export default css`
 }
 .visible .imageContainer{
   animation-name: appearImage;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
 @keyframes appearImage{
   0%{
     transform: translateY(200px) translateX(-80px);
+    opacity: 0;
   }
   100%{
-   transform: translateY(0) translateX(-80px);
+    transform: translateY(0) translateX(-80px);
+    opacity: 1;
   }
 }
 .imageContainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
   border-radius: 20px;
 

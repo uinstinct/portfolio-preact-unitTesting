@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import NextImage from 'next/image';
 
 import { RadioGroup, Radio, IconButton, Link } from '@chakra-ui/core';
 
 import { GoMarkGithub } from 'react-icons/go';
 import { BiLink } from 'react-icons/bi';
+import { FaPenNib } from 'react-icons/fa';
 
 import styles from "../../styles/card";
 
@@ -11,10 +13,12 @@ import styles from "../../styles/card";
 const glossIcon = {
     "github": GoMarkGithub,
     "app": BiLink,
+    "blog": FaPenNib,
 }
 const glossColour = {
     "github": "#C4F1F9",
     "app": "#9ae6b4",
+    "blog": "#feb2b2",
 }
 
 function Card({ sourceItems, links }) {
@@ -22,16 +26,14 @@ function Card({ sourceItems, links }) {
     const uniqueMark = sourceItems[0].id;
     const [currentCard, setCurrentCard] = useState(uniqueMark);
 
-    const displayCard = event => {
+    const displayCard = async event => {
+        const preItem = document.getElementById(`item${currentCard}`);
+        preItem.classList.remove("visible");
         setCurrentCard(parseInt(event.target.value));
     }
 
     useEffect(() => {
         // this cannot be added in the displayCard function because this is a sideEffect
-        const items = document.getElementsByClassName(`source-item-${uniqueMark}`);
-        for (const iEl of items) {
-            iEl.classList.remove("visible");
-        }
         const item = document.getElementById(`item${currentCard}`);
         item.classList.add("visible");
     }, [currentCard]);
@@ -52,7 +54,8 @@ function Card({ sourceItems, links }) {
                 <div className="wrapper">
                     <div key={idx} className={`source-item-${uniqueMark} item item-${idx + 1}`} id={`item${id}`}>
                         <div className="imageContainer">
-                            <img src={`${sourceItem.imgSrc}`} alt={`${sourceItem.title}`} />
+                            <img src={`${sourceItem.imgSrc}`} alt={`${sourceItem.title}`}
+                                loading="lazy" />
                         </div>
                         <div className="content">
                             <div className="title">{sourceItem.title}</div>
