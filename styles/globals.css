@@ -25,15 +25,33 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: guildof;
-  overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: guildof;
+    overflow-x: hidden;
+    scrollbar-color: #3d3d5c #b3ccff;
+    scrollbar-width: 12px;
+    scroll-behavior: smooth;
 }
 
 ::selection {
     background: #81E6D9;
     color: #E53E3E;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #b3ccff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3d3d5c;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 a {

@@ -6,5 +6,5 @@ module.exports = {
         loader: "cloudinary",
         path: "https://res.cloudinary.com/gamersinstinct7/",
     },
-    basePath: isProduction ? "/portfolio" : "/",
+    basePath: isProduction ? "/portfolio" : "",
 }
