@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import NextImage from 'next/image';
 
-import { RadioGroup, Radio, IconButton, Link, Tag, TagLabel, TagIcon } from '@chakra-ui/core';
+import { RadioGroup, Radio, IconButton, Link, Tag, TagLabel, TagIcon, ControlBox } from '@chakra-ui/core';
 
 import { glossColour, glossIcon } from "./constants"
 import styles from "../../styles/card";
@@ -14,6 +14,8 @@ function Card({ sourceItems, links, stacks }) {
     const displayCard = async event => {
         const preItem = document.getElementById(`item${currentCard}`);
         preItem.classList.remove("visible");
+        const preTap = document.getElementById(`tap${currentCard}`);
+        preTap.classList.remove("checked");
         setCurrentCard(parseInt(event.target.value));
     }
 
@@ -21,12 +23,16 @@ function Card({ sourceItems, links, stacks }) {
         // this cannot be added in the displayCard function because this is a sideEffect
         const item = document.getElementById(`item${currentCard}`);
         item.classList.add("visible");
+        const tap = document.getElementById(`tap${currentCard}`);
+        tap.classList.add("checked");
     }, [currentCard]);
 
     useEffect(() => {
         const item = document.getElementById(`item${uniqueMark}`);
         item.classList.add("visible");
-    }, [])
+        const tap = document.getElementById(`tap${uniqueMark}`);
+        tap.classList.add("checked");
+    }, []);
 
 
     const items = sourceItems.map((sourceItem, idx) => {
@@ -55,11 +61,13 @@ function Card({ sourceItems, links, stacks }) {
     const bullets = sourceItems.length > 1 ? sourceItems.map((sourceItem, idx) => {
         const { id } = sourceItem;
         return (
-            <div key={id}>
+            <div key={idx}>
                 <style jsx>
                     {styles}
                 </style>
-                <Radio value={id} variantColor="red" isChecked={id === currentCard} onChange={displayCard} />
+                <label htmlFor={`tapInput${id}`} id={`tap${id}`} className="tap tap-${uniqueMark}">
+                    <input type="radio" id={`tapInput${id}`} value={id} checked={id === currentCard} onChange={displayCard} />
+                </label>
             </div>
         );
     })
@@ -82,7 +90,7 @@ function Card({ sourceItems, links, stacks }) {
         const colour = glossColour[stack] || "gray";
 
         return (
-            <Tag key={idx} rounded="full" variantColor={colour} variant="solid" >
+            <Tag key={idx} rounded="full" variantColor={colour} variant="solid">
                 <TagLabel>{stack}</TagLabel>
                 <TagIcon icon={icon} />
             </Tag>
@@ -98,7 +106,9 @@ function Card({ sourceItems, links, stacks }) {
                 {items}
                 <div className="bullets" style={{ top: `calc(100%/${items.length})` }}>
                     <RadioGroup defaultValue="1" value={currentCard} >
-                        {bullets}
+                        <div className="sliders">
+                            {bullets}
+                        </div>
                     </RadioGroup>
                 </div>
                 <div className="links">

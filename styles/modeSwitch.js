@@ -2,8 +2,8 @@ import css from "styled-jsx/css";
 
 export default css`
 input {
-	display: block;
-	margin-bottom: 1.5em;
+  display: block;
+  margin-bottom: 1.5em;
 }
 .container {
   text-align: center;
@@ -22,8 +22,6 @@ input {
 	width: 3em;
 	height: 1.5em;
 	transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	appearance: none;
 }
 .l:before, .l:after {

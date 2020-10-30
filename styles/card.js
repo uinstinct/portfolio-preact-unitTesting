@@ -111,6 +111,7 @@ export default css`
     opacity: 1;
   }
 }
+
 .imageContainer img {
   width: 100%;
   height: 100%;
@@ -235,21 +236,34 @@ export default css`
   position: absolute;
   right: 1.5rem;
   width: 1rem;
-  color: blue;
+}
+
+.sliders{
+  position: absolute;
+  height: 100%;
+  bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .sliders {
+    bottom: 0;
+    top: 2.5rem;
+  }
 }
 
 .tap {
   position: relative;
-  height: 50px;
+  height: 20px;
   width: 10px;
-  background: #0ece47;
+  background: #cccccc;
   border-radius: 5px;
   display: inline-flex;
   margin: 0 3px;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
-.tap:hover {
-  background: #cccccc;
+.tap.checked {
+  background: #0ece47;
+  height: 35px;
 }
 
 input[type="radio"] {
