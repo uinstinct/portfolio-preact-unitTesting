@@ -1,13 +1,14 @@
 import '../styles/globals.css'
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { ChakraProvider, ColorModeProvider } from '@chakra-ui/core';
+
+import theme from "../styles/themes/theme";
 
 function MyApp({ Component, pageProps }) {
 
     return (
-        <ThemeProvider>
-            <CSSReset />
-            <Component {...pageProps} />
-        </ThemeProvider>
+        <ChakraProvider>
+                <Component {...pageProps} />
+        </ChakraProvider>
     );
 }
 

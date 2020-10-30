@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import NextImage from 'next/image';
 
-import { RadioGroup, Radio, IconButton, Link, Tag, TagLabel, TagIcon, ControlBox } from '@chakra-ui/core';
+import {
+    RadioGroup,
+    IconButton, Link,
+    Tag, TagLabel, TagRightIcon
+} from '@chakra-ui/core';
 
 import { glossColour, glossIcon } from "./constants"
 import styles from "../../styles/card";
@@ -90,9 +94,9 @@ function Card({ sourceItems, links, stacks }) {
         const colour = glossColour[stack] || "gray";
 
         return (
-            <Tag key={idx} rounded="full" variantColor={colour} variant="solid">
+            <Tag key={idx} rounded="full" variant="solid" colorScheme={colour}>
                 <TagLabel>{stack}</TagLabel>
-                <TagIcon icon={icon} />
+                <TagRightIcon as={icon} />
             </Tag>
         );
     })
