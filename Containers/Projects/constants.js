@@ -1,3 +1,39 @@
+import { GoMarkGithub } from 'react-icons/go';
+import { BiLink } from 'react-icons/bi';
+import { FaPenNib } from 'react-icons/fa';
+import { GrNode } from 'react-icons/gr';
+import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb } from 'react-icons/si';
+import { GrTechnology } from 'react-icons/gr';
+
+export const glossIcon = {
+    // links
+    "github": GoMarkGithub,
+    "app": BiLink,
+    "blog": FaPenNib,
+
+    // stacks
+    "nodejs": GrNode,
+    "reactjs": SiReact,
+    "nextjs": SiNextDotJs,
+    "postgresql": SiPostgresql,
+    "mongodb": SiMongodb,
+    "other": GrTechnology,
+}
+
+export const glossColour = {
+    // links
+    "github": "#C4F1F9",
+    "app": "#9ae6b4",
+    "blog": "#feb2b2",
+
+    // stacks
+    "nodejs": "orange",
+    "reactjs": "red",
+    "nextjs": "cyan",
+    "postgresql": "blue",
+    "mongodb": "teal",
+}
+
 export default [
     {
         items: [
@@ -19,7 +55,8 @@ export default [
                 provider: "app",
                 link: "https://texthand-use-a.netlify.app/"
             }
-        ]
+        ],
+        stacks: ["nodejs", "reactjs",],
     },
     {
         items: [
@@ -44,6 +81,7 @@ export default [
                 link: "https://google.com"
             }
         ],
+        stacks: ["nodejs", "reactjs", "postgresql"],
     },
     {
         items: [
@@ -76,6 +114,7 @@ export default [
                 provider: "blog",
                 link: "https://dev.to/adityamitra/whatster-the-chatbot-i-built-for-twilio-9ok",
             }
-        ]
+        ],
+        stacks: ["nodejs", "reactjs", "twilio", "mongodb"],
     }
-]
+];

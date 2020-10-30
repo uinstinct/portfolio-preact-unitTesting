@@ -9,7 +9,7 @@ function Projects() {
             item["id"] = count++;
             return item;
         })
-        return <Card key={idx} sourceItems={sourceItems} links={constant.links}/>
+        return <Card key={idx} sourceItems={sourceItems} links={constant.links} stacks={constant.stacks} />
     });
     return (
         <>

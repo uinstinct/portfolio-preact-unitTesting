@@ -1,27 +1,12 @@
 import { useState, useEffect } from 'react';
 import NextImage from 'next/image';
 
-import { RadioGroup, Radio, IconButton, Link } from '@chakra-ui/core';
+import { RadioGroup, Radio, IconButton, Link, Tag, TagLabel, TagIcon } from '@chakra-ui/core';
 
-import { GoMarkGithub } from 'react-icons/go';
-import { BiLink } from 'react-icons/bi';
-import { FaPenNib } from 'react-icons/fa';
-
+import { glossColour, glossIcon } from "./constants"
 import styles from "../../styles/card";
 
-
-const glossIcon = {
-    "github": GoMarkGithub,
-    "app": BiLink,
-    "blog": FaPenNib,
-}
-const glossColour = {
-    "github": "#C4F1F9",
-    "app": "#9ae6b4",
-    "blog": "#feb2b2",
-}
-
-function Card({ sourceItems, links }) {
+function Card({ sourceItems, links, stacks }) {
 
     const uniqueMark = sourceItems[0].id;
     const [currentCard, setCurrentCard] = useState(uniqueMark);
@@ -92,6 +77,18 @@ function Card({ sourceItems, links }) {
         );
     })
 
+    const stackTags = stacks.map((stack, idx) => {
+        const icon = glossIcon[stack] || glossIcon["other"];
+        const colour = glossColour[stack] || "gray";
+
+        return (
+            <Tag key={idx} rounded="full" variantColor={colour} variant="solid" >
+                <TagLabel>{stack}</TagLabel>
+                <TagIcon icon={icon} />
+            </Tag>
+        );
+    })
+
     return (
         <>
             <style jsx>
@@ -106,6 +103,9 @@ function Card({ sourceItems, links }) {
                 </div>
                 <div className="links">
                     {linkButtons}
+                </div>
+                <div className="stacks">
+                    {stackTags}
                 </div>
             </div>
         </>

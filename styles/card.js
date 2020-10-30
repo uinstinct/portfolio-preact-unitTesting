@@ -157,6 +157,11 @@ export default css`
   color: #0d0925;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 576px) {
+  .title {
+    margin-bottom: 0;
+  }
+}
 
 .description {
   font-family: "Concert One", cursive;
@@ -174,12 +179,56 @@ export default css`
 .links {
   position: absolute;
   bottom: 2rem;
-  width: 100%;
+  width: 50%;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    left: 0;
+  }
+}
+
+.stacks{
+  position: absolute;
+  bottom: 2rem;
+  width: 40%;
+  right: 1rem;
+
+  font-family: "Concert One";
+  font-size: 0.85rem;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 0.25rem;
+  grid-column-gap: 0.25rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .stacks {
+    width: 75%;
+    grid-row-gap: 0.5rem;
+    bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .stacks {
+    width: 65%;
+    grid-template-columns: auto auto;
+    grid-row-gap: 0.25rem;
+    bottom: 0.25rem;
+  }
 }
 
 .bullets {
