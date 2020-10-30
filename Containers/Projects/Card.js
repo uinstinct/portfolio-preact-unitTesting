@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useColorMode, LightMode } from "@chakra-ui/core";
 import NextImage from 'next/image';
 
 import {
     RadioGroup,
-    IconButton, Link,
+    Icon, IconButton, Link,
     Tag, TagLabel, TagRightIcon
 } from '@chakra-ui/core';
 
@@ -12,6 +13,7 @@ import styles from "../../styles/card";
 
 function Card({ sourceItems, links, stacks }) {
 
+    const { colorMode } = useColorMode();
     const uniqueMark = sourceItems[0].id;
     const [currentCard, setCurrentCard] = useState(uniqueMark);
 
@@ -78,7 +80,7 @@ function Card({ sourceItems, links, stacks }) {
         : null;
 
     const linkButtons = links.map((link, idx) => {
-        const icon = glossIcon[link.provider];
+        const icon = <Icon as={glossIcon[link.provider]} />;
         const colour = glossColour[link.provider];
 
         return (
@@ -106,7 +108,7 @@ function Card({ sourceItems, links, stacks }) {
             <style jsx>
                 {styles}
             </style>
-            <div className="card">
+            <div className={`card ${colorMode === "dark" ? "dark" : null}`}>
                 {items}
                 <div className="bullets" style={{ top: `calc(100%/${items.length})` }}>
                     <RadioGroup defaultValue="1" value={currentCard} >
@@ -115,12 +117,14 @@ function Card({ sourceItems, links, stacks }) {
                         </div>
                     </RadioGroup>
                 </div>
-                <div className="links">
-                    {linkButtons}
-                </div>
-                <div className="stacks">
-                    {stackTags}
-                </div>
+                <LightMode>
+                    <div className="links">
+                        {linkButtons}
+                    </div>
+                    <div className="stacks">
+                        {stackTags}
+                    </div>
+                </LightMode>
             </div>
         </>
     );

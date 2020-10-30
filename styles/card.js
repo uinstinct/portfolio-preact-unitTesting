@@ -13,6 +13,9 @@ export default css`
   height: 400px;
   transition: all 0.3s;
 }
+.card.dark{
+  filter: invert(1) hue-rotate(180deg);
+}
 @media screen and (max-width: 992px) {
   .card {
     margin: 1.5rem auto;
@@ -90,7 +93,9 @@ export default css`
   width: 300px;
   flex-shrink: 0;
   height: 300px;
-  background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+  background: #fc4a1a;
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
+
   box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
   border-radius: 20px;
   overflow: hidden;
@@ -100,6 +105,11 @@ export default css`
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
+}
+.dark .imageContainer{
+  filter: invert(1) hue-rotate(180deg);
+  background: #4776E6;
+  background: linear-gradient(to right, #8E54E9, #4776E6);
 }
 @keyframes appearImage{
   0%{
@@ -187,6 +197,9 @@ export default css`
   justify-content: flex-end;
   align-items: center;
 }
+.dark .links{
+    filter: invert(1) hue-rotate(180deg);
+}
 @media screen and (max-width: 768px) {
   .links {
     flex-direction: column;
@@ -214,6 +227,9 @@ export default css`
   align-content: center;
   justify-items: center;
   align-items: center;
+}
+.dark .stacks{
+    filter: invert(1) hue-rotate(180deg);
 }
 @media screen and (max-width: 768px) {
   .stacks {

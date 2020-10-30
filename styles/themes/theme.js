@@ -4,9 +4,9 @@ import { mode } from '@chakra-ui/theme-tools';
 const styles = {
     global: (props) => ({
         body: {
-            color: mode('gray.800', 'whiteAlpha.900')(props),
-            bg: mode('white', 'gray.900')(props)
-        }
+            bg: mode('white', 'black')(props),
+            color: mode('black', 'white')(props),
+        },
     })
 };
 
@@ -15,12 +15,12 @@ const components = {
         baseStyle: (props) => ({
             color: mode('blue.400', 'blue.300')(props)
         })
-    }
+    },
 };
 
 const theme = extendTheme({
+    styles,
     components,
-    styles
 });
 
 export default theme;
