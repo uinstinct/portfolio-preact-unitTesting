@@ -16,10 +16,10 @@ export function SSRTheme({ cookies, children }) {
     )
 }
 
-export function getServerSideProps({ req }) {
+export function getStaticProps({ req }) {
     return {
         props: {
-            cookies: req.headers.cookie ?? "",
+            cookies: (req && req.headers && req.headers.cookie) ?? "",
         },
     }
 }

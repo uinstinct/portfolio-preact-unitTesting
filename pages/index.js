@@ -23,4 +23,4 @@ export default function IndexPage() {
     );
 }
 
-export { getServerSideProps } from "../styles/themes/serverTheme";
+export { getStaticProps } from "../styles/themes/serverTheme";
