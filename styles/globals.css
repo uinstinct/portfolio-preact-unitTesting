@@ -1,25 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Staatliches&family=Vampiro+One&display=swap');
 
 @font-face {
     font-family: "ostrich-regular";
-    src: url("/fonts/ostrich-regular.ttf");
+    src: url("https://res.cloudinary.com/gamersinstinct7/raw/upload/v1604069019/portfolio/fonts/ostrich-regular_wnusow.ttf");
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "ostrich-light";
-    src: url("/fonts/OstrichSans-Light.otf");
+    src: url("https://res.cloudinary.com/gamersinstinct7/raw/upload/v1604069019/portfolio/fonts/OstrichSans-Light_qtfgmr.otf");
 }
 
 @font-face {
     font-family: "guildof";
-    src: url("/fonts/guildof.ttf");
-}
-
-@font-face{
-    font-family: "VampiroOne";
-    src: url("/fonts/VampiroOne.ttf");
+    src: url("https://res.cloudinary.com/gamersinstinct7/raw/upload/v1604069019/portfolio/fonts/guildof_oyav34.ttf");
 }
 
 * {
