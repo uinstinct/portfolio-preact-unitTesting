@@ -1,10 +1,15 @@
 import css from "styled-jsx/css";
 
 export default css`
+.container{
+  width: 352px;
+  height: 352px;
+  margin: 1rem 0;
+}
 .section {
   height: 352px;
-  position: relative;
   width: 352px;
+  position: relative;
   padding: 4em;
 
   display: flex;
@@ -20,7 +25,7 @@ export default css`
   margin: 1em auto;
   overflow: hidden;
   position: relative;
-  width: 22em;
+  width: 352px;
 }
 
 .part {
@@ -51,7 +56,7 @@ export default css`
 .part-2 span {
   color: #3498db;
   display: table-cell;
-  font-weight: 700;
+  font-family: 'ostrich-regular';
   vertical-align: middle;
   animation: code 5s infinite;
   animation-timing-function: cubic-bezier(0.6, 1.5, 0.6, 1);

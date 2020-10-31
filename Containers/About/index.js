@@ -1,13 +1,21 @@
-import { SimpleGrid } from "@chakra-ui/core";
+import { useColorMode } from "@chakra-ui/core";
+
 import DeviceChange from "./deviceChange";
+import AboutMe from "./aboutMe";
+
+import styles from "../../styles/aboutContainer";
 
 function About() {
-
+    const { colorMode } = useColorMode();
     return (
         <>
-            <SimpleGrid minChildWidth="352px" spacingX="10px" spacingY="10px">
+            <style jsx>
+                {styles}
+            </style>
+            <div className={`about-container ${colorMode === "dark"?"dark":null}`}>
                 <DeviceChange />
-            </SimpleGrid>
+                <AboutMe />
+            </div>
         </>
     );
 }
