@@ -1,5 +1,5 @@
 import constants from './constants';
-import Card from "./Card";
+import Card from "./card";
 
 function Projects() {
     let count = 1;

@@ -490,7 +490,7 @@ const itemStyles = css`
   }
 }
 
-.imageContainer img {
+.imageContainer > img {
   width: 100%;
   height: 100%;
   display: block;
@@ -498,7 +498,7 @@ const itemStyles = css`
 
   font-size: 3rem;
 }
-.imageContainer img:after {
+.imageContainer > img:after {
   content: " ";
   margin-left: 25%;
   margin-top: 50%;

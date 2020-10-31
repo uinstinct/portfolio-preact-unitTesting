@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { SSRTheme } from "../styles/themes/serverTheme";
 
 import Landing from "../Containers/Landing";
+import About from "../Containers/About";
 import Card from "../Containers/Projects";
 
 export default function IndexPage() {
@@ -16,6 +17,7 @@ export default function IndexPage() {
             <SSRTheme>
                 <div>
                     <Landing />
+                    <About />
                     <Card />
                 </div>
             </SSRTheme>
