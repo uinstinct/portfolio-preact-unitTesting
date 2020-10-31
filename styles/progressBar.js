@@ -12,9 +12,10 @@ export default css`
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 2px;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 440px) {
   .progress {
-    width: 15rem;
+    width: 10rem;
+    margin: auto;
   }
 }
 

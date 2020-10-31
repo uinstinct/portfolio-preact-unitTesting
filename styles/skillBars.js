@@ -16,6 +16,17 @@ const allStyles = css`
   box-shadow: 0 0 20px 6px#336699;
   padding: 0.5rem 0 1rem 0;
 }
+@media screen and (max-width: 440px) {
+  .skill-container {
+    width:70%;
+    margin-left: -1.5rem;
+  }
+}
+@media screen and (max-width: 240px) {
+  .skill-container {
+    margin-left: -4.5rem;
+  }
+}
 .dark{
   filter: invert(1) hue-rotate(180deg);
 }
@@ -29,7 +40,6 @@ const allStyles = css`
 `;
 
 const topicStyles = css`
-
 .skill-progress {
   display: block;
   margin: 0.5rem 0;

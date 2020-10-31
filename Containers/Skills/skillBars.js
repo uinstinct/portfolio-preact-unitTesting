@@ -1,53 +1,33 @@
-import { useState, useEffect } from 'react';
-
 import ProgressBar from "./progressBar";
+import { glossIcon, glossColour } from "./constants";
 
-import { useColorMode } from "@chakra-ui/core";
+import { useColorMode, Icon } from "@chakra-ui/core";
 import { allStyles, topicStyles } from "../../styles/skillBars";
 
 function SkillBar({ heading, topics, id }) {
 
     const { colorMode } = useColorMode();
 
-    /*let timer = null;
-    const scrollEffect = (e) => {
+    const topicsDisplay = topics && topics.map((topic, idx) => {
+        const name = topic.icon || (topic.name && topic.name.toLowerCase())
+            || "other";
+        const iconName = glossIcon[name];
+        const iconColour = glossColour[name];
 
-        console.log(e);
-        //clearTimeout(timer);
-        //timer = setTimeout(() => {
-            const bar = document.getElementById(`skillbar-${id}`)
-            console.log(bar, "is the bar");
-            const slideInAt =
-                window.scrollY + window.innerHeight - bar.height / 5;
-            console.info(bar.offsetTop, slideInAt);
-            const isHalfShown = slideInAt > bar.offsetTop;
-            const barBottom = bar.offsetTop + bar.height;
-
-            const hasNotScrolledPast = window.scrollY < barBottom;
-            if (isHalfShown && hasNotScrolledPast) {
-                console.log('done');
-            }
-        //}, 100);
-    }
-
-    useEffect(() => {
-        console.log('added effect');
-        document.addEventListener("scroll", scrollEffect);
         return (
-            document.removeEventListener("scroll", scrollEffect)
+            <div key={idx}>
+                <style jsx>
+                    {topicStyles}
+                </style>
+                <div className={`skill-progress ${colorMode === "dark" ? "dark" : null}`}>
+                    <ProgressBar progress={topic.progress} />
+                    <p><Icon style={{ margin: "0.25rem 1rem 0 0", }}
+                        as={iconName} color={iconColour}
+                    />{topic.name}</p>
+                </div >
+            </div>
         );
-    }, []);*/
-
-    const topicsDisplay = topics && topics.map((topic, idx) =>
-        <div key={idx}>
-            <style jsx>
-                {topicStyles}
-            </style>
-            <div className={`skill-progress ${colorMode === "dark" ? "dark" : null}`}>
-                <ProgressBar progress={topic.progress} />
-                <p>{topic.name}</p>
-            </div >
-        </div>
+    }
     ) || [];
 
     return (
