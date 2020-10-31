@@ -4,6 +4,7 @@ export default css`
 .container{
   width: 100%;
   padding: 0.5rem 1rem;
+  transition: all 1s linear;
 }
 
 .module {
@@ -27,6 +28,9 @@ export default css`
 }
 .dark:hover .content {
   opacity: 0.7;
+}
+.module:hover .content .title{
+  font-size: 2em;
 }
 .module:hover .content .description {
   height: auto !important;
@@ -77,13 +81,15 @@ export default css`
   margin: 0;
   padding: 0 0 10px;
   color: #333333;
-  font-size: 26px;
+  font-family: 'Vampiro One', cursive;
+  font-size: 4em;
   font-weight: 700;
 }
 .module .content .sub-title {
   margin: 0;
   padding: 0 0 20px;
   color: #e74c3c;
+  font-family: 'Concert One', sans-serif;
   font-size: 20px;
   font-weight: 400;
 }
@@ -94,6 +100,7 @@ export default css`
   text-align: center;
 
   color: #666666;
+  font-family: 'Righteous', cursive;
   font-size: 1rem;
   font-weight: bold;
 }
