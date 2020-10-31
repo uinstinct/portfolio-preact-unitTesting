@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/core';
 
 import { glossColour, glossIcon } from "./constants"
-import styles from "../../styles/card";
+import { allStyles, itemStyles, bulletStyles } from "../../styles/card";
 
 function Card({ sourceItems, links, stacks }) {
 
@@ -46,9 +46,9 @@ function Card({ sourceItems, links, stacks }) {
         return (
             <div key={idx}>
                 <style jsx>
-                    {styles}
+                    {itemStyles}
                 </style>
-                <div className="wrapper">
+                <div className={`wrapper ${colorMode === "dark" ? "dark" : null}`}>
                     <div key={idx} className={`source-item-${uniqueMark} item item-${idx + 1}`} id={`item${id}`}>
                         <div className="imageContainer">
                             <img src={`${sourceItem.imgSrc}`} alt={`${sourceItem.title}`}
@@ -69,7 +69,7 @@ function Card({ sourceItems, links, stacks }) {
         return (
             <div key={idx}>
                 <style jsx>
-                    {styles}
+                    {bulletStyles}
                 </style>
                 <label htmlFor={`tapInput${id}`} id={`tap${id}`} className="tap tap-${uniqueMark}">
                     <input type="radio" id={`tapInput${id}`} value={id} checked={id === currentCard} onChange={displayCard} />
@@ -106,7 +106,7 @@ function Card({ sourceItems, links, stacks }) {
     return (
         <>
             <style jsx>
-                {styles}
+                {allStyles}
             </style>
             <div className={`card ${colorMode === "dark" ? "dark" : null}`}>
                 {items}
