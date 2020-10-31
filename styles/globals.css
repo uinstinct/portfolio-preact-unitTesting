@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Staatliches&family=Vampiro+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+/*use this for progress displays*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
 @font-face {
     font-family: "ostrich-regular";
     src: url("https://res.cloudinary.com/gamersinstinct7/raw/upload/v1604069019/portfolio/fonts/ostrich-regular_wnusow.ttf");

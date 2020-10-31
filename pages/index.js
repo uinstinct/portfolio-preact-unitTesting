@@ -4,7 +4,8 @@ import { SSRTheme } from "../styles/themes/serverTheme";
 
 import Landing from "../Containers/Landing";
 import About from "../Containers/About";
-import Card from "../Containers/Projects";
+import Skills from "../Containers/Skills";
+import Cards from "../Containers/Projects";
 
 export default function IndexPage() {
     return (
@@ -18,7 +19,8 @@ export default function IndexPage() {
                 <div>
                     <Landing />
                     <About />
-                    <Card />
+                    <Skills />
+                    <Cards />
                 </div>
             </SSRTheme>
         </>

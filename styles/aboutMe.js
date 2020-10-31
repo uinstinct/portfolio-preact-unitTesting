@@ -4,7 +4,6 @@ export default css`
 .container{
   width: 100%;
   padding: 0.5rem 1rem;
-  transition: all 1s linear;
 }
 
 .module {
@@ -16,7 +15,7 @@ export default css`
   width: 100%;
   height: 470px;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s linear 0s;
+  transition: all 0.5s linear 0s;
 }
 
 .module:hover {
