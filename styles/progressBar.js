@@ -20,7 +20,7 @@ export default css`
 
 .progress .bar {
   float: left;
-  width: 5%;
+  width: 0;
   height: 100%;
 
   font-size: 10px;
@@ -37,14 +37,8 @@ export default css`
 
   transition: width 2s ease 0.5s;
 }
-
-@keyframes expandWidth {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: auto;
-  }
+.inactive{
+  width: 0 !important;
 }
 
 .progress .bar + .bar {

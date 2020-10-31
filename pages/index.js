@@ -16,7 +16,7 @@ export default function IndexPage() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <SSRTheme>
-                <div>
+                <div id="all-containers">
                     <Landing />
                     <About />
                     <Skills />

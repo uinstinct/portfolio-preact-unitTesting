@@ -14,6 +14,7 @@ const allStyles = css`
   justify-items: center;
 
   box-shadow: 0 0 20px 6px#336699;
+  padding: 0.5rem 0 1rem 0;
 }
 .dark{
   filter: invert(1) hue-rotate(180deg);
@@ -34,7 +35,7 @@ const topicStyles = css`
   margin: 0.5rem 0;
 }
 .skill-progress p {
-  margin-top: -0.2rem;
+  margin-top: -0.1rem;
 
   display: flex;
   justify-content: center;

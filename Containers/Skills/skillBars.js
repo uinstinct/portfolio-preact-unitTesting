@@ -1,17 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 
 import ProgressBar from "./progressBar";
 
 import { useColorMode } from "@chakra-ui/core";
 import { allStyles, topicStyles } from "../../styles/skillBars";
 
-function SkillBars({ heading, topics }) {
+function SkillBar({ heading, topics, id }) {
 
     const { colorMode } = useColorMode();
-    const [width, setWidth] = useState(0);
-    setTimeout(() => {
-        setWidth(80);
-    }, 1000);
+
+    /*let timer = null;
+    const scrollEffect = (e) => {
+
+        console.log(e);
+        //clearTimeout(timer);
+        //timer = setTimeout(() => {
+            const bar = document.getElementById(`skillbar-${id}`)
+            console.log(bar, "is the bar");
+            const slideInAt =
+                window.scrollY + window.innerHeight - bar.height / 5;
+            console.info(bar.offsetTop, slideInAt);
+            const isHalfShown = slideInAt > bar.offsetTop;
+            const barBottom = bar.offsetTop + bar.height;
+
+            const hasNotScrolledPast = window.scrollY < barBottom;
+            if (isHalfShown && hasNotScrolledPast) {
+                console.log('done');
+            }
+        //}, 100);
+    }
+
+    useEffect(() => {
+        console.log('added effect');
+        document.addEventListener("scroll", scrollEffect);
+        return (
+            document.removeEventListener("scroll", scrollEffect)
+        );
+    }, []);*/
 
     const topicsDisplay = topics && topics.map((topic, idx) =>
         <div key={idx}>
@@ -30,7 +55,8 @@ function SkillBars({ heading, topics }) {
             <style jsx>
                 {allStyles}
             </style>
-            <div className={`skill-container ${colorMode === "dark" ? "dark" : null}`}>
+            <div className={`skill-container ${colorMode === "dark" ? "dark" : null}`}
+                id={`skillbar-${id}`}>
                 <div className="skill-header">{heading}</div>
                 {topicsDisplay}
             </div>
@@ -38,4 +64,4 @@ function SkillBars({ heading, topics }) {
     );
 };
 
-export default SkillBars;
+export default SkillBar;
