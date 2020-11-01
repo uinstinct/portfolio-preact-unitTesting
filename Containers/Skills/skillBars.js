@@ -11,8 +11,8 @@ function SkillBar({ heading, topics, id }) {
     const topicsDisplay = topics && topics.map((topic, idx) => {
         const name = topic.icon || (topic.name && topic.name.toLowerCase())
             || "other";
-        const iconName = glossIcon[name];
-        const iconColour = glossColour[name];
+        const iconName = glossIcon[name] || glossIcon["other"];
+        const iconColour = glossColour[name] || glossColour["other"];
 
         return (
             <div key={idx}>

@@ -33,6 +33,8 @@ function Card({ sourceItems, links, stacks }) {
         tap.classList.add("checked");
     }, [currentCard]);
 
+
+    // on initial component mount
     useEffect(() => {
         const item = document.getElementById(`item${uniqueMark}`);
         item.classList.add("visible");

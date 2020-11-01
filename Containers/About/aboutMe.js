@@ -5,11 +5,11 @@ import styles from "../../styles/aboutMe";
 function AboutMe({title, subTitle, description, image, status}) {
     const { colorMode } = useColorMode();
     return (
-        <div id="myAbout">
+        <>
             <style jsx>
                 {styles}
             </style>
-            <div className={`container ${colorMode === "dark"?"dark":null}`}>
+            <div className={`container ${colorMode === "dark"?"dark":null}`} id="myAbout">
                 <div className="column">
                     <div className="module">
                         <div className="thumbnail">
@@ -24,7 +24,7 @@ function AboutMe({title, subTitle, description, image, status}) {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -1,10 +1,10 @@
 import { GoMarkGithub } from 'react-icons/go';
-import { BiLink } from 'react-icons/bi';
+import { BiLink, BiBookContent } from 'react-icons/bi';
 import { FaPenNib } from 'react-icons/fa';
-import { GrNode } from 'react-icons/gr';
-import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb } from 'react-icons/si';
-import { GrTechnology } from 'react-icons/gr';
-import { DiDjango, DiJavascript1 } from "react-icons/di";
+import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb, SiDocker } from 'react-icons/si';
+import { GrNode, GrTechnology, GrUbuntu, GrFedora } from 'react-icons/gr';
+import { DiDjango, DiJavascript1, DiCss3Full, DiAws, DiGit } from "react-icons/di";
+import { IoLogoJavascript } from "react-icons/io";
 
 export const glossIcon = {
     // links
@@ -16,11 +16,22 @@ export const glossIcon = {
     "nodejs": GrNode,
     "reactjs": SiReact,
     "nextjs": SiNextDotJs,
+    "css": DiCss3Full,
+    "js": IoLogoJavascript,
 
+    // backends
     "expressjs": DiJavascript1,
+    "django": DiDjango,
     "mongodb": SiMongodb,
     "postgresql": SiPostgresql,
-    "django": DiDjango,
+    "cms": BiBookContent,
+
+    // devops
+    "ubuntu": GrUbuntu,
+    "docker": SiDocker,
+    "aws": DiAws,
+    "fedora": GrFedora,
+    "git": DiGit,
 
     "other": GrTechnology,
 }
@@ -35,11 +46,22 @@ export const glossColour = {
     "nodejs": "red.400",
     "reactjs": "blue.400",
     "nextjs": "gray.400",
+    "css": "blue.600",
+    "js": "orange.400",
 
+    //backends
     "expressjs": "teal.200",
     "mongodb": "green.400",
     "postgresql": "blue.600",
     "django": "gray.500",
+    "cms": "yellow.200",
+
+    // devops
+    "ubuntu": "orange.600",
+    "docker": "blue.500",
+    "aws": "orange.900",
+    "fedora": "teal.700",
+    "git": "orange.700",
 
     "other": "black",
 }
@@ -50,16 +72,25 @@ export default [
         topics: [
             {
                 name: "NextJS",
-                progress: 80,
+                progress: 90,
             },
             {
                 name: "ReactJS",
                 progress: 90,
             },
+            {
+                name: "CSS",
+                progress: 90,
+            },
+            {
+                name: "Vanilla Javascript",
+                progress: 95,
+                icon: "js",
+            }
         ]
     },
     {
-        heading: "Backend",
+        heading: "Backend and Databases",
         topics: [
             {
                 name: "ExpressJS",
@@ -70,6 +101,44 @@ export default [
                 progress: 65,
                 icon: "django"
             },
+            {
+                name: "PostgreSQL",
+                progress: 95,
+            },
+            {
+                name: "MongoDB",
+                progress: 95,
+            },
+            {
+                name: "Content Management Systems",
+                progress: 85,
+                icon: "cms",
+            }
+        ]
+    },
+    {
+        heading: "Cloud and Devops",
+        topics: [
+            {
+                name: "Ubuntu",
+                progress: 75,
+            },
+            {
+                name: "Docker",
+                progress: 90,
+            },
+            {
+                name: "AWS",
+                progress: 70,
+            },
+            {
+                name: "Fedora",
+                progress: 60,
+            },
+            {
+                name: "Git",
+                progress: 90,
+            }
         ]
     }
 ];

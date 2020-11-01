@@ -11,8 +11,9 @@ export default css`
   grid-row-gap: 1rem;
   justify-items: center;
   align-items: center;
+  padding-right: 2.5rem;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1170px) {
   .container {
     grid-template-columns: 1fr 1fr;
   }

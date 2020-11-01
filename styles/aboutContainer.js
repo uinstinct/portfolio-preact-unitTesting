@@ -2,7 +2,7 @@ import css from "styled-jsx/css";
 
 export default css`
   .about-container{
-    width: 100%;
+    width: 100% !important;
     background-color: #eefdfd;
 
     display: grid;
