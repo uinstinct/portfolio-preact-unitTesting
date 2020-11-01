@@ -80,7 +80,7 @@ export default [
             },
             {
                 name: "CSS",
-                progress: 90,
+                progress: 95,
             },
             {
                 name: "Vanilla Javascript",

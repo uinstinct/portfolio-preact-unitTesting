@@ -4,6 +4,10 @@
 /*use this for progress displays*/
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
 
+/*for footers*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
 @font-face {
     font-family: "ostrich-regular";
     src: url("https://res.cloudinary.com/gamersinstinct7/raw/upload/v1604069019/portfolio/fonts/ostrich-regular_wnusow.ttf");

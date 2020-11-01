@@ -6,6 +6,7 @@ import Landing from "../Containers/Landing";
 import About from "../Containers/About";
 import Skills from "../Containers/Skills";
 import Cards from "../Containers/Projects";
+import Footer from "../Containers/Footer";
 
 export default function IndexPage() {
     return (
@@ -21,6 +22,7 @@ export default function IndexPage() {
                     <About />
                     <Skills />
                     <Cards />
+                    <Footer />
                 </div>
             </SSRTheme>
         </>
