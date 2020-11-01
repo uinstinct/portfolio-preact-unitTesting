@@ -10,8 +10,9 @@ const allStyles = css`
   height: 10rem;
   padding-bottom: 5rem;
   color: black;
+  overflow: hidden;
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
   .footer {
     height: 22.5rem;
     grid-template-columns: 1fr;
@@ -43,9 +44,6 @@ const allStyles = css`
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
-}
-.contact-icons > * {
-  margin: 0 1rem;
 }
 
 .provider {
@@ -79,7 +77,7 @@ const allStyles = css`
   align-items: center;
   text-align: center;
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
   .built-with {
     margin: 1.5rem 0;
   }
@@ -96,6 +94,11 @@ const allStyles = css`
   display: block;
   margin: 1rem;
   font-weight: 200;
+}
+@media screen and (max-width: 450px){
+  .built-with span{
+    margin: 0 1rem;
+  }
 }
 `;
 
