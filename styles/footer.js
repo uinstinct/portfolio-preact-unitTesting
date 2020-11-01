@@ -90,13 +90,16 @@ const allStyles = css`
   border-left: 1px solid black;
   opacity: 0.5;
 }
-.built-with span {
+.built-with span{
+  font-weight: 200;
+  display: inline;
+}
+.built-with .built {
   display: block;
   margin: 1rem;
-  font-weight: 200;
 }
 @media screen and (max-width: 450px){
-  .built-with span{
+  .built-with .built{
     margin: 0 1rem;
   }
 }

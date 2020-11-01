@@ -40,6 +40,7 @@ export default css`
 }
 .module:hover .thumbnail {
   height: 100%;
+  background: none;
 }
 .module:hover .thumbnail img {
   transform: scale(1.2);
@@ -50,6 +51,11 @@ export default css`
   background: #000000;
   height: 215px;
   overflow: hidden;
+  
+  background: url("/about-fallback.webp") url("/https://res.cloudinary.com/gamersinstinct7/image/upload/v1604254473/portfolio/fallbacks/webp%20min%20fallback.webp") whitesmoke;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .module .thumbnail img {
   display: block;

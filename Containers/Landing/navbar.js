@@ -60,7 +60,7 @@ function Navbar() {
                 if (!barSeen) {
                     skillBarsSeen();
                 }
-            }, 100);
+            }, 1000);
         }
 
         window.addEventListener('scroll', scrollEvents);
