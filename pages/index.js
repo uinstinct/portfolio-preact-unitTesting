@@ -31,24 +31,24 @@ export default function IndexPage() {
 
                 {/* generics */}
                 <link rel="icon"
-                    href="https://res.cloudinary.com/gamersinstinct7/image/upload/v1604255529/portfolio/favicons/32_fp8hpk.ico"
+                    href="/favicons/32.ico"
                     sizes="32x32" />
                 <link rel="icon"
-                    href="https://res.cloudinary.com/gamersinstinct7/image/upload/v1604255530/portfolio/favicons/76_qe8zbi.ico"
+                    href="/favicons/76.ico"
                     sizes="76x76" />
                 <link rel="icon"
-                    href="https://res.cloudinary.com/gamersinstinct7/image/upload/v1604255530/portfolio/favicons/128_mh8anx.ico"
+                    href="/favicons/128.ico"
                     sizes="128x128" />
                 <link rel="icon"
-                    href="https://res.cloudinary.com/gamersinstinct7/image/upload/v1604255530/portfolio/favicons/228_johffl.ico"
+                    href="/favicons/228.ico"
                     sizes="228x228" />
                 {/* Android */}
                 <link rel="shortcut icon" 
-                    href="https://res.cloudinary.com/gamersinstinct7/image/upload/v1604255530/portfolio/favicons/128_mh8anx.ico"
+                    href="/favicons/128.ico"
                     sizes="196x196" />
                 {/* iOS */}
                 <link rel="apple-touch-icon"
-                    href="https://res.cloudinary.com/gamersinstinct7/image/upload/v1604255530/portfolio/favicons/76_qe8zbi.ico"
+                    href="/favicons/76.ico"
                     sizes="120x120" />
 
             </Head>

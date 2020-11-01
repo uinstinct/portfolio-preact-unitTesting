@@ -1,3 +1,7 @@
+# deployment to github pages might take longer and for the effects might not appear as soon as the action build and deploys
+# it can make more than 2 build and deploys to properly set the site
+# the static assets might also not take effect as soon as the action completes
+
 name: Build and Deploy
 
 on:
