@@ -45,9 +45,12 @@ export default css`
 .module:hover .thumbnail img {
   transform: scale(1.2);
   opacity: 0.8;
+  height: 100%;
+  top: 0;
 }
 
 .module .thumbnail {
+  position: relative;
   background: #000000;
   height: 215px;
   overflow: hidden;
@@ -58,9 +61,10 @@ export default css`
   background-repeat: no-repeat;
 }
 .module .thumbnail img {
-  display: block;
-  height: 100%;
+  position: absolute;
+  height: auto;
   width: 120%;
+  display: block;
   transition: all 0.3s linear 0s;
 }
 .dark .thumbnail img {

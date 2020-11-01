@@ -13,7 +13,7 @@ function AboutMe({title, subTitle, description, image, status}) {
                 <div className="column">
                     <div className="module">
                         <div className="thumbnail">
-                            <img src={image+"abc"} alt={title} loading="lazy" />
+                            <img src={image} alt={title} loading="lazy" />
                         </div>
                         <div className="content">
                             <h1 className="title">{title}</h1>
