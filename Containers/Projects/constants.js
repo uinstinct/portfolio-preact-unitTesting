@@ -69,6 +69,11 @@ export default [
                 title: "Character Card Builder",
                 description: "You can try and build your own cards in the links given below",
                 imgSrc: "https://res.cloudinary.com/gamersinstinct7/image/upload/v1604062660/portfolio/Character%20Card%20Builder/CCB_chars_2_w32zn9.png",
+            },
+            {
+                title: "Character Card Builder",
+                description: "It has even has awesome SEARCH feature and a fabolous DARK mode built integrated into it.",
+                imgSrc: "https://res.cloudinary.com/gamersinstinct7/image/upload/v1604261385/portfolio/Character%20Card%20Builder/CCB_Search_3_wgxikr.jpg",
             }
         ],
         links: [
