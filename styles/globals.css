@@ -38,7 +38,7 @@ body {
     font-family: guildof;
     overflow-x: hidden;
     scrollbar-color: #3d3d5c #b3ccff;
-    scrollbar-width: 12px;
+    -scrollbar-width: 12px;
 }
 
 ::selection {
