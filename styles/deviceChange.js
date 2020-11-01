@@ -4,7 +4,7 @@ export default css`
 .container{
   width: 352px;
   height: 352px;
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 1rem;
 }
 .section {
   height: 352px;

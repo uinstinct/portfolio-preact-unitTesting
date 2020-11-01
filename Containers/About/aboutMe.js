@@ -5,7 +5,7 @@ import styles from "../../styles/aboutMe";
 function AboutMe({title, subTitle, description, image, status}) {
     const { colorMode } = useColorMode();
     return (
-        <>
+        <div id="myAbout">
             <style jsx>
                 {styles}
             </style>
@@ -24,7 +24,7 @@ function AboutMe({title, subTitle, description, image, status}) {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -13,8 +13,15 @@ const styles = {
 const components = {
     Link: {
         baseStyle: (props) => ({
-            color: mode('blue.400', 'blue.300')(props)
-        })
+            color: mode('blue.400', 'blue.300')(props),
+            textDecoration: "10px solid red",
+        }),
+        variants: {
+            outline: {
+                border: "0",
+                borderColor: "none",
+            },
+        }
     },
 };
 

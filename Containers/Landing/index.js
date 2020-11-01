@@ -5,7 +5,7 @@ import styles from "../../styles/landing";
 
 function LandingContainer() {
     return (
-        <>
+        <div id="pageLanding">
             <style jsx>
                 {styles}
             </style>
@@ -13,7 +13,7 @@ function LandingContainer() {
                 <Header />
                 <Navbar />
             </div>
-        </>
+        </div>
     );
 }
 

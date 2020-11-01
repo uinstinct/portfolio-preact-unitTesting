@@ -3,7 +3,7 @@ import css from "styled-jsx/css";
 export default css`
 .container{
   width: 100%;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem 1rem 1rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
