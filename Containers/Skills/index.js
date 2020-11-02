@@ -15,7 +15,7 @@ function Skills() {
             <style jsx>
                 {styles}
             </style>
-            <div className="container">
+            <div className="skill-main-container">
                 {skillBars}
             </div>
         </div>

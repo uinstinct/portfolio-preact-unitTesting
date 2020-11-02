@@ -1,9 +1,9 @@
 import css from "styled-jsx/css";
 
 export default css`
-.container{
+.skill-main-container{
   width: 100%;
-  margin: 2rem 1rem 1rem 1rem;
+  margin-top 1rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,17 +11,21 @@ export default css`
   grid-row-gap: 1rem;
   justify-items: center;
   align-items: center;
-  padding-right: 2.5rem;
 }
 @media screen and (max-width: 1170px) {
-  .container {
+  .skill-main-container {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
-    margin: 1rem 0.5rem;
+  .skill-main-container {
+    margin: 1rem auto;
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 280px) {
+  .skill-main-container {
+    margin: 1rem -2rem;
   }
 }
 `;

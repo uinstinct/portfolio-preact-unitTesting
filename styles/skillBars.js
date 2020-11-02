@@ -5,9 +5,10 @@ const allStyles = css`
   background: aliceblue;
   border: 1px solid blue;
   border-radius: 0.8rem;
-  width: 25rem;
+  width: 90%;
   font-family: 'Staatliches', cursive;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,13 +19,8 @@ const allStyles = css`
 }
 @media screen and (max-width: 440px) {
   .skill-container {
-    width:70%;
-    margin-left: -1.5rem;
-  }
-}
-@media screen and (max-width: 240px) {
-  .skill-container {
-    margin-left: -4.5rem;
+    width: 100%;
+    margin: 0;
   }
 }
 .dark{
@@ -41,8 +37,12 @@ const allStyles = css`
 
 const topicStyles = css`
 .skill-progress {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0.5rem 0;
+  width: 100%;
 }
 .skill-progress p {
   margin-top: -0.1rem;

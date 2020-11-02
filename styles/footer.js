@@ -80,6 +80,7 @@ const allStyles = css`
 @media screen and (max-width: 350px) {
   .built-with {
     margin: 1.5rem 0;
+    font-size: 1.5em;
   }
 }
 .built-with .border{
