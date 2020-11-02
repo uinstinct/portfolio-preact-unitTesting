@@ -12,7 +12,7 @@ const allStyles = css`
   color: black;
   overflow: hidden;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 590px) {
   .footer {
     height: 22.5rem;
     grid-template-columns: 1fr;
@@ -80,7 +80,6 @@ const allStyles = css`
 @media screen and (max-width: 350px) {
   .built-with {
     margin: 1.5rem 0;
-    font-size: 1.5em;
   }
 }
 .built-with .border{
@@ -91,6 +90,11 @@ const allStyles = css`
   border-left: 1px solid black;
   opacity: 0.5;
 }
+@media screen and (max-width: 590px){
+  .built-with .border{
+    display: none;
+  }
+}
 .built-with span{
   font-weight: 200;
   display: inline;
@@ -99,7 +103,7 @@ const allStyles = css`
   display: block;
   margin: 1rem;
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 590px){
   .built-with .built{
     margin: 0 1rem;
   }
