@@ -1,11 +1,11 @@
 import { GoMarkGithub } from 'react-icons/go';
 import { BiLink } from 'react-icons/bi';
 import { FaPenNib } from 'react-icons/fa';
-import { GrNode } from 'react-icons/gr';
-import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb, SiRedux, SiReactrouter,SiMarkdown } from 'react-icons/si';
-import { GrTechnology } from 'react-icons/gr';
+import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb, SiRedux, SiReactrouter,SiMarkdown, SiHtml5,  } from 'react-icons/si';
+import { GrTechnology, GrCss3, GrNode } from 'react-icons/gr';
 import {CgWebsite} from 'react-icons/cg';
 import {DiDjango} from 'react-icons/di';
+import {IoLogoJavascript} from 'react-icons/io';
 
 
 export const glossIcon = {
@@ -15,6 +15,10 @@ export const glossIcon = {
     "blog": FaPenNib,
 
     // stacks
+    "html": SiHtml5,
+    "css": GrCss3,
+    "javascript": IoLogoJavascript,
+
     "nodejs": GrNode,
     "expressjs": GrNode,
     "reactjs": SiReact,
@@ -39,6 +43,10 @@ export const glossColour = {
     "blog": "#feb2b2",
 
     // stacks
+    "html": "green",
+    "css": "blue",
+    "javascript": "orange",
+
     "nodejs": "orange",
     "expressjs": "orange",
     "reactjs": "red",
@@ -150,6 +158,32 @@ export default [
             }
         ],
         stacks: ["expressjs", "reactjs", "twilio", "mongodb",  "react router"],
+    },
+
+    {
+        items: [
+            {
+                title: "Power JS",
+                description: "A full collection of WebPages and JS functionalities coded only using Vanilla JS.",
+                imgSrc: "https://res.cloudinary.com/gamersinstinct7/image/upload/v1604308432/portfolio/Power%20JS/pj-1_klb8hj.png",
+            },
+            {
+                title: "Socio Students",
+                description: "You can also view my other projects and pens on codepen.io/uinstinct",
+                imgSrc: "https://res.cloudinary.com/gamersinstinct7/image/upload/v1604308433/portfolio/Power%20JS/pj-2_t5cjkq.png",
+            },
+        ],
+        links: [
+            {
+                provider: "github",
+                link: "https://github.com/aditya-mitra/powerJS",
+            },
+            {
+                provider: "app",
+                link: "https://codepen.io/collection/XWdjWw",
+            },
+        ],
+        stacks: ["html","css","javascript"],
     },
     {
         items: [

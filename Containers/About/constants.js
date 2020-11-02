@@ -8,7 +8,7 @@
  * */
 export default {
     title: "Aditya Mitra",
-    subTitle: "Working on JavaScript",
+    subTitle: "Working with JavaScript",
     description:
         `I am Aditya. A developer. I love to develop apps that are useful.
          I am not an early developer. I did not start too young. I started with JS at age 18.
