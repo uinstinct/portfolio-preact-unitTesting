@@ -2,7 +2,7 @@
 # it can make more than 2 build and deploys to properly set the site
 # the static assets might also not take effect as soon as the action completes
 
-name: Build and Deploy
+name: Build and Deploy Main
 
 on:
   push:
