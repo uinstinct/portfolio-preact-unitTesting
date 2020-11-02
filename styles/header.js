@@ -36,8 +36,6 @@ export default css`
   font-family: 'ostrich-regular';
   color: #fff;
   font-size: 5rem;
-  -webkit-animation: mainFadeIn 2s forwards;
-  -o-animation: mainFadeIn 2s forwards;
   animation: mainFadeIn 2s forwards;
   animation-delay: 1.6s;
   opacity: 0;
@@ -48,11 +46,8 @@ export default css`
 .container .box .title h1 span {
   width: 0px;
   height: 0px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   background: #00ffff;
-  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation: popIn 1.2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   animation-delay: 2s;
   margin-left: 5px;
@@ -87,7 +82,8 @@ export default css`
   background: #33cccc;
   position: absolute;
   animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-  animation-delay: 2s;
+  animation-direction: reverse;
+  animation-delay: 2.5s;
   display: flex;
 }
 .container .box .role p {
