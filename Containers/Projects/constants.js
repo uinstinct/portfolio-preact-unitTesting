@@ -1,18 +1,22 @@
 import { GoMarkGithub } from 'react-icons/go';
 import { BiLink } from 'react-icons/bi';
 import { FaPenNib } from 'react-icons/fa';
-import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb, SiRedux, SiReactrouter,SiMarkdown, SiHtml5,  } from 'react-icons/si';
+import { SiReact, SiNextDotJs, SiPostgresql, SiMongodb, SiRedux, SiReactrouter, SiMarkdown, SiHtml5, SiNetlify, SiDjango, SiFirebase } from 'react-icons/si';
 import { GrTechnology, GrCss3, GrNode } from 'react-icons/gr';
-import {CgWebsite} from 'react-icons/cg';
-import {DiDjango} from 'react-icons/di';
-import {IoLogoJavascript} from 'react-icons/io';
-
+import { CgWebsite } from 'react-icons/cg';
+import { IoLogoJavascript } from 'react-icons/io';
+import { ImCodepen } from 'react-icons/im';
+import { BsFillTriangleFill } from 'react-icons/bs';
 
 export const glossIcon = {
     // links
     "github": GoMarkGithub,
     "app": BiLink,
     "blog": FaPenNib,
+    "netlify": SiNetlify,
+    "firebase": SiFirebase,
+    "codepen": ImCodepen,
+    "vercel": BsFillTriangleFill,
 
     // stacks
     "html": SiHtml5,
@@ -26,7 +30,7 @@ export const glossIcon = {
     "nextjs": SiNextDotJs,
     "react router": SiReactrouter,
 
-    "django": DiDjango,
+    "django": SiDjango,
     "postgresql": SiPostgresql,
     "mongodb": SiMongodb,
 
@@ -41,6 +45,10 @@ export const glossColour = {
     "github": "#C4F1F9",
     "app": "#9ae6b4",
     "blog": "#feb2b2",
+    "netlify": "#00b3b3",
+    "firebase": "#ff6600",
+    "codepen": "#001a4d",
+    "vercel": "#000099",
 
     // stacks
     "html": "green",
@@ -87,7 +95,7 @@ export default [
                 link: "https://github.com/aditya-mitra/code-rush",
             },
             {
-                provider: "app",
+                provider: "vercel",
                 link: "https://code-rush.vercel.app/"
             }
         ],
@@ -118,7 +126,7 @@ export default [
                 link: "https://github.com/aditya-mitra/card_builder"
             },
             {
-                provider: "app",
+                provider: "netlify",
                 link: "https://github.com/aditya-mitra/card_builder"
             }
         ],
@@ -149,7 +157,7 @@ export default [
                 link: "https://github.com/aditya-mitra/whatster",
             },
             {
-                provider: "app",
+                provider: "firebase",
                 link: "https://whatster.web.app/",
             },
             {
@@ -179,7 +187,7 @@ export default [
                 link: "https://github.com/aditya-mitra/powerJS",
             },
             {
-                provider: "app",
+                provider: "codepen",
                 link: "https://codepen.io/collection/XWdjWw",
             },
         ],

@@ -15,6 +15,7 @@ function Footer() {
             <Link href={constant.link} isExternal
                 onMouseEnter={() => setProvider(constant.provider)}
                 onMouseLeave={() => setProvider(providerDefault)}
+                key={constant.link}
             >
                 <Icon
                     as={constant.icon} color={constant.colour}
