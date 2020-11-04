@@ -2,11 +2,11 @@ import Head from 'next/head';
 
 import { SSRTheme } from "../styles/themes/serverTheme";
 
-import Landing from "../Containers/Landing";
-import About from "../Containers/About";
-import Skills from "../Containers/Skills";
-import Cards from "../Containers/Projects";
-import Footer from "../Containers/Footer";
+import Landing from "../containers/Landing";
+import About from "../containers/About";
+import Skills from "../containers/Skills";
+import Cards from "../containers/Projects";
+import Footer from "../containers/Footer";
 
 export default function IndexPage() {
     return (

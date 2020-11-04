@@ -98,7 +98,7 @@ export default [
             },
             {
                 name: "Django Rest Framework",
-                progress: 65,
+                progress: 35,
                 icon: "django"
             },
             {
@@ -111,7 +111,7 @@ export default [
             },
             {
                 name: "Content Management Systems",
-                progress: 85,
+                progress: 65,
                 icon: "cms",
             }
         ]
@@ -121,7 +121,7 @@ export default [
         topics: [
             {
                 name: "Ubuntu",
-                progress: 75,
+                progress: 25,
             },
             {
                 name: "Docker",
@@ -129,11 +129,11 @@ export default [
             },
             {
                 name: "AWS",
-                progress: 70,
+                progress: 30,
             },
             {
                 name: "Fedora",
-                progress: 60,
+                progress: 30,
             },
             {
                 name: "Git",
