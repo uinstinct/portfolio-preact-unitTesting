@@ -98,7 +98,7 @@ export default [
             },
             {
                 name: "Django Rest Framework",
-                progress: 35,
+                progress: 65,
                 icon: "django"
             },
             {
@@ -133,7 +133,7 @@ export default [
             },
             {
                 name: "Fedora",
-                progress: 30,
+                progress: 40,
             },
             {
                 name: "Git",

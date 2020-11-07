@@ -85,12 +85,19 @@ function Card({ sourceItems, links, stacks }) {
 
     const linkButtons = links.map((link, idx) => {
         const icon = <Icon as={glossIcon[link.provider]} />;
-        const colour = glossColour[link.provider];
+        let colour = glossColour[link.provider];
+
+        if ('darkModeColour' in link && colorMode === "dark") {
+            colour = link.darkModeColour;
+        }
 
         return (
             <Link isExternal href={link.link} key={idx}>
-                <IconButton aria-label={link.provider} icon={icon} color={colour}
-                    variant="ghost" isRound="true" size="lg" />
+                <IconButton
+                    aria-label={link.provider}
+                    icon={icon} color={colour}
+                    variant="ghost" isRound="true" size="lg"
+                />
             </Link>
         );
     })

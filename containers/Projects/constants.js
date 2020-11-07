@@ -96,7 +96,8 @@ export default [
             },
             {
                 provider: "vercel",
-                link: "https://code-rush.vercel.app/"
+                link: "https://code-rush.vercel.app/",
+                darkModeColour: "gray.600"
             }
         ],
         stacks: ["nextjs", "nodejs", "mongodb", "markdown",],
@@ -127,7 +128,7 @@ export default [
             },
             {
                 provider: "netlify",
-                link: "https://github.com/aditya-mitra/card_builder"
+                link: "https://charactercardbuilder.netlify.app"
             }
         ],
         stacks: ["nodejs", "reactjs", "postgresql", "redux",],
@@ -189,6 +190,7 @@ export default [
             {
                 provider: "codepen",
                 link: "https://codepen.io/collection/XWdjWw",
+                darkModeColour: "gray.500"
             },
         ],
         stacks: ["html","css","javascript"],
