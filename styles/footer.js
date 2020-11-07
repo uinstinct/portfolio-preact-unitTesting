@@ -7,14 +7,14 @@ const allStyles = css`
   grid-template-columns: 2fr 1fr;
   background-color: aliceblue;
   font-family: "Barlow", sans-serif;
-  height: 10rem;
+  height: 7rem;
   padding-bottom: 5rem;
   color: black;
   overflow: hidden;
 }
 @media screen and (max-width: 590px) {
   .footer {
-    height: 22.5rem;
+    height: 16.5rem;
     grid-template-columns: 1fr;
   }
 }
@@ -46,24 +46,6 @@ const allStyles = css`
   margin: 1rem 0;
 }
 
-.provider {
-  font-size: 1.2em;
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
-  border-radius: 1rem;
-  min-width: 20%;
-  margin-top: 1rem;
-  padding: 0.25rem;
-  background: greenyellow;
-  background: linear-gradient(to right, #86fde8, #acb6e5);
-  box-shadow: 0 0 5px 3px #acb6e5;
-  opacity: 0.15;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 
 .built-with {
   position: relative;
