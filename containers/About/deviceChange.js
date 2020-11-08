@@ -9,11 +9,11 @@ function DeviceChange() {
                 <section className="modernWeb section">
                     <div className="modernWrap section-wrap">
                         <div className="center">
-                            <div className="part part-1"></div>
+                            <div className="part part-1" />
                             <div className="part part-2">
                                 <span>instinct</span>
                             </div>
-                            <div className="part part-3"></div>
+                            <div className="part part-3" />
                         </div>
                     </div>
                 </section>

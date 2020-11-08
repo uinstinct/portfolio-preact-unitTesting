@@ -53,10 +53,11 @@ function Card({ sourceItems, links, stacks }) {
                 <div className={`wrapper ${colorMode === "dark" ? "dark" : null}`}>
                     <div key={idx} className={`source-item-${uniqueMark} item item-${idx + 1}`} id={`item${id}`}>
                         <div className="imageContainer">
-                            <img src={sourceItem.imgSrc} alt={sourceItem.title}
-                                loading="lazy" />
-                                :
-                                null
+                            <NextImage
+                                src={sourceItem.imgSrc} alt={sourceItem.title}
+                                loading="lazy" layout="fixed"
+                                width="300" height="300"
+                            />
                         </div>
                         <div className="content">
                             <div className="title">{sourceItem.title}</div>

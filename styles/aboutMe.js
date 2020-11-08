@@ -51,11 +51,11 @@ export default css`
 
 .module .thumbnail {
   position: relative;
-  background: #000000;
+  background: #000;
   height: 215px;
   overflow: hidden;
   
-  background: url("/about-fallback.webp") url("/https://res.cloudinary.com/gamersinstinct7/image/upload/v1604254473/portfolio/fallbacks/webp%20min%20fallback.webp") whitesmoke;
+  background: url("/about-fallback.webp") whitesmoke;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@ export default css`
   height: auto;
   width: 120%;
   display: block;
-  transition: all 0.3s linear 0s;
+  transition: all 0.3s linear;
 }
 .dark .thumbnail img {
   filter: invert(1) hue-rotate(180deg);
