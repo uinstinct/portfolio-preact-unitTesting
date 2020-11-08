@@ -1,6 +1,27 @@
-import styles from '../../styles/header';
+import { useState, useEffect } from 'react';
+
+import styles, { mouser } from '../../styles/header';
 
 function Header() {
+
+    const [isMounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setMounted(true);
+        }, 2000);
+    }, []);
+
+    const mouseTrans =
+        <>
+            <style jsx>
+                {mouser}
+            </style>
+            <div className="mouser">
+                <div className="scrollball" />
+            </div>
+        </>;
+
     return (
         <>
             <style jsx>
@@ -14,9 +35,10 @@ function Header() {
                     </div>
                     <div className="role">
                         <div className="block" />
-                        <p>Instinct</p>
+                        <p>UInstinct</p>
                     </div>
                 </div>
+                {isMounted ? mouseTrans : null}
             </div>
         </>
     );

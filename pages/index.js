@@ -1,6 +1,3 @@
-import Head from 'next/head';
-import { useState } from 'react';
-
 import { SSRTheme } from "../styles/themes/serverTheme";
 
 import Landing from "../containers/Landing";
@@ -10,19 +7,15 @@ import Cards from "../containers/Projects";
 import Footer from "../containers/Footer";
 
 export default function IndexPage() {
-    const [areComponentsMounted, setComponentsMount] = useState(false);
-    setTimeout(() => {
-        setComponentsMount(true);
-    }, 2000);
 
     return (
         <>
             <SSRTheme>
-                <div id="all-containers">
+                <div
+                    id="all-containers"
+                >
                     <Landing />
-                    <div
-                        style={{ display: areComponentsMounted ? "block" : "block" }}
-                    >
+                    <div>
                         <About />
                         <Skills />
                         <Cards />

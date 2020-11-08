@@ -28,7 +28,7 @@ const allStyles = css`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex;
   align-items: center;
 }
 

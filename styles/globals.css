@@ -70,3 +70,7 @@ a {
     opacity: 0.4;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
+#all-containers{
+    overflow-x: hidden;
+}
