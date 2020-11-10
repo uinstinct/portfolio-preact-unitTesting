@@ -83,7 +83,7 @@ function Navbar() {
                         backgroundColor: "transparent",
                         fontFamily: "Righteous",
                         fontSize: "1.5rem",
-                        color: colorMode === "dark" ? "#5c5c3d" : "#e6e6e6",
+                        color: colorMode === "dark" ? "#e2e8f0" : "#e6e6e6",
                     }}>
                         Browse More
                     </MenuButton>

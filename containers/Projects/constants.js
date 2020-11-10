@@ -177,7 +177,7 @@ export default [
                 imgSrc: "https://res.cloudinary.com/gamersinstinct7/image/upload/v1604308432/portfolio/Power%20JS/pj-1_klb8hj.png",
             },
             {
-                title: "Socio Students",
+                title: "Power JS",
                 description: "You can also view my other projects and pens on codepen.io/uinstinct",
                 imgSrc: "https://res.cloudinary.com/gamersinstinct7/image/upload/v1604308433/portfolio/Power%20JS/pj-2_t5cjkq.png",
             },
