@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { useColorMode, LightMode } from "@chakra-ui/core";
-import NextImage from 'next/image';
+import NextImage from "next/image";
+import { handleDragStart, handleDrag, handleDragEnd }
+    from "./cardMouseMovements";
 
 import {
     RadioGroup,
@@ -15,31 +17,36 @@ function Card({ sourceItems, links, stacks }) {
 
     const { colorMode } = useColorMode();
     const uniqueMark = sourceItems[0].id;
-    const [currentCard, setCurrentCard] = useState(uniqueMark);
+    const [currentItem, setCurrentItem] = useState(uniqueMark);
+    const totalItems = sourceItems.length;
 
-    const displayCard = async event => {
-        const preItem = document.getElementById(`item${currentCard}`);
+    const displayCard = event => {
+        const preItem = document.getElementById(`item${currentItem}`);
         preItem.classList.remove("visible");
-        const preTap = document.getElementById(`tap${currentCard}`);
+        const preTap = document.getElementById(`tap${currentItem}`);
         preTap.classList.remove("checked");
-        setCurrentCard(parseInt(event.target.value));
+        setCurrentItem(parseInt(event.target.value));
     }
 
     useEffect(() => {
         // this cannot be added in the displayCard function because this is a sideEffect
-        const item = document.getElementById(`item${currentCard}`);
+        const item = document.getElementById(`item${currentItem}`);
         item.classList.add("visible");
-        const tap = document.getElementById(`tap${currentCard}`);
-        tap.classList.add("checked");
-    }, [currentCard]);
+        if (totalItems > 1) {
+            const tap = document.getElementById(`tap${currentItem}`);
+            tap.classList.add("checked");
+        }
+    }, [currentItem]);
 
 
     // on initial component mount
     useEffect(() => {
         const item = document.getElementById(`item${uniqueMark}`);
         item.classList.add("visible");
-        const tap = document.getElementById(`tap${uniqueMark}`);
-        tap.classList.add("checked");
+        if (totalItems > 1) {
+            const tap = document.getElementById(`tap${uniqueMark}`);
+            tap.classList.add("checked");
+        }
     }, []);
 
 
@@ -68,7 +75,7 @@ function Card({ sourceItems, links, stacks }) {
         );
     });
 
-    const bullets = sourceItems.length > 1 ? sourceItems.map((sourceItem, idx) => {
+    const bullets = totalItems > 1 ? sourceItems.map((sourceItem, idx) => {
         const { id } = sourceItem;
         return (
             <div key={idx}>
@@ -76,7 +83,7 @@ function Card({ sourceItems, links, stacks }) {
                     {bulletStyles}
                 </style>
                 <label htmlFor={`tapInput${id}`} id={`tap${id}`} className="tap tap-${uniqueMark}">
-                    <input type="radio" id={`tapInput${id}`} value={id} checked={id === currentCard} onChange={displayCard} />
+                    <input type="radio" id={`tapInput${id}`} value={id} checked={id === currentItem} onChange={displayCard} />
                 </label>
             </div>
         );
@@ -107,23 +114,37 @@ function Card({ sourceItems, links, stacks }) {
         const colour = glossColour[stack] || "gray";
 
         return (
-            <Tag key={idx} rounded="full" variant="solid" colorScheme={colour}>
+            <Tag
+                key={idx} colorScheme={colour}
+                rounded="full" variant="solid"
+            >
                 <TagLabel>{stack}</TagLabel>
                 <TagRightIcon as={icon} />
             </Tag>
         );
     })
 
-
     return (
         <>
             <style jsx>
                 {allStyles}
             </style>
-            <div className={`card ${colorMode === "dark" ? "dark" : null}`} >
+            <div
+                className={`card ${colorMode === "dark" ? "dark" : null}`}
+                onMouseDown={(event) => handleDragStart(event, totalItems)}
+                onMouseMove={(event) =>
+                    handleDrag(
+                        event, uniqueMark, totalItems,
+                        currentItem, displayCard
+                    )
+                }
+                onMouseUp={() => handleDragEnd()}
+            >
                 {items}
-                <div className="bullets" style={{ top: `calc(100%/${items.length})` }}>
-                    <RadioGroup defaultValue="1" value={currentCard} >
+                <div className="bullets"
+                    style={{ top: `calc(100%/${items.length})` }}
+                >
+                    <RadioGroup defaultValue="1" value={currentItem} >
                         <div className="sliders">
                             {bullets}
                         </div>

@@ -12,6 +12,7 @@ const allStyles = css`
   border-radius: 25px;
   height: 400px;
   transition: all 0.3s;
+  cursor: move;
 }
 .card.dark{
   filter: invert(1) hue-rotate(180deg);
