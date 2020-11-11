@@ -1,7 +1,9 @@
-import constants from './constants';
+import constants from "./constants";
 import Card from "./card";
+import { showSwipeGuide } from "./cardMouseMovements";
 
 function Projects() {
+
     let count = 1;
     const cards = constants.map((constant, idx) => {
         const { items } = constant;
@@ -12,7 +14,10 @@ function Projects() {
         return <Card key={idx} sourceItems={sourceItems} links={constant.links} stacks={constant.stacks} />
     });
     return (
-        <div id="myProjects">
+        <div
+            id="myProjects"
+            onMouseEnter={showSwipeGuide}
+        >
             {cards}
         </div>
     );

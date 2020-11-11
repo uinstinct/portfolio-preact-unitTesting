@@ -131,14 +131,14 @@ function Card({ sourceItems, links, stacks }) {
             </style>
             <div
                 className={`card ${colorMode === "dark" ? "dark" : null}`}
-                onMouseDown={(event) => handleDragStart(event, totalItems)}
-                onMouseMove={(event) =>
+                onPointerDown={(event) => handleDragStart(event, totalItems)}
+                onPointerMove={(event) =>
                     handleDrag(
                         event, uniqueMark, totalItems,
                         currentItem, displayCard
                     )
                 }
-                onMouseUp={() => handleDragEnd()}
+                onPointerUp={() => handleDragEnd()}
             >
                 {items}
                 <div className="bullets"

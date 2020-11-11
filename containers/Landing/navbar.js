@@ -2,7 +2,11 @@ import { useEffect } from 'react';
 
 import ModeSwitch from './modeSwitch';
 
-import { useColorMode, Button, Link, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/core";
+import {
+    useColorMode,
+    Button, Link,
+    Menu, MenuButton, MenuList, MenuItem
+} from "@chakra-ui/core";
 import styles from "../../styles/navbar";
 
 function Navbar() {
@@ -20,7 +24,6 @@ function Navbar() {
                 nav.classList.remove("fixNavbar");
             }
         }
-
 
         let barSeen = false;
         const bar = document.querySelector(".skill-container");
@@ -65,6 +68,8 @@ function Navbar() {
 
         window.addEventListener('scroll', scrollEvents);
     }, []);
+
+
     return (
         <>
             <style jsx>
