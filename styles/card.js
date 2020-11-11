@@ -144,7 +144,7 @@ const itemStyles = css`
 }
 .visible .content{
   animation-name: appearContent;
-  animation-duration: 0.5s;
+  animation-duration: 0.6s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
@@ -163,6 +163,9 @@ const itemStyles = css`
     margin-top: -130px;
     text-align: center;
     padding: 0 30px;
+  }
+  .visible .content{
+      animation-duration: 0.75s;
   }
 }
 @media screen and (max-width: 576px) {
@@ -184,7 +187,7 @@ const itemStyles = css`
 }
 .visible .imageContainer{
   animation-name: appearImage;
-  animation-duration: 0.5s;
+  animation-duration: 0.6s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
@@ -221,6 +224,9 @@ const itemStyles = css`
   .imageContainer {
     transform: translateY(-50%);
     width: 90%;
+  }
+  .visible .imageContainer{
+    animation-duration: 0.75s;
   }
   @keyframes appearImage{
   0%{

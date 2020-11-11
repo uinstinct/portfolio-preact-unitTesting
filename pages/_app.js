@@ -27,6 +27,8 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:description" content="The portfolio site of Aditya Mitra." />
                 <meta property="og:image" content="/me.jpg" />
 
+                <link rel="manifest" href="/manifest.json" />
+
                 {/* generics */}
                 <link rel="icon"
                     href="/favicons/32.ico"

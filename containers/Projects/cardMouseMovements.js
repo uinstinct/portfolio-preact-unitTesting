@@ -38,7 +38,7 @@ export function handleDragEnd() {
 
 let shown = false;
 export function showSwipeGuide() {
-    if (true || !shown) {
+    if (!shown) {
         const toast = createStandaloneToast();
         toast({
             position: "bottom-left",
