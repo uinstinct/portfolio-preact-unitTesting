@@ -16,7 +16,6 @@ export function handleDrag(
 ) {
     if (willDrag) {
         const shiftX = event.nativeEvent.pageX - originalPosX;
-        console.log("drag", shiftX, currentItem);
 
         const relativeCurrent = currentItem - uniqueMark;
         if (shiftX < -50 && relativeCurrent < totalItems - 1) {
@@ -41,7 +40,6 @@ let shown = false;
 export function showSwipeGuide() {
     if (true || !shown) {
         const toast = createStandaloneToast();
-        localStorage.clear();
         toast({
             position: "bottom-left",
             render: () => (
