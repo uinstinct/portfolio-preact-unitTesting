@@ -1,12 +1,12 @@
 import constants from "./constants";
-import SkillBar from "./skillBars";
+import SkillCards from "./skillCard";
 
 import styles from "../../styles/skillsContainer";
 
 function Skills() {
 
-    const skillBars = constants.map((constant, idx) =>
-        <SkillBar key={idx}
+    const skillCards = constants.map((constant, idx) =>
+        <SkillCards key={idx}
             heading={constant.heading} topics={constant.topics}
             id={idx}/>
     )
@@ -16,7 +16,7 @@ function Skills() {
                 {styles}
             </style>
             <div className="skill-main-container">
-                {skillBars}
+                {skillCards}
             </div>
         </div>
     );

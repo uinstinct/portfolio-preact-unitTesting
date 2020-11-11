@@ -2,7 +2,9 @@ import ProgressBar from "./progressBar";
 import { glossIcon, glossColour } from "./constants";
 
 import { useColorMode, Icon } from "@chakra-ui/core";
-import { allStyles, topicStyles } from "../../styles/skillBars";
+import { allStyles, topicStyles } from "../../styles/skillCard";
+import { handleMouseMove, handleMouseLeave }
+    from "./skillMouseMovements";
 
 function SkillBar({ heading, topics, id }) {
 
@@ -30,13 +32,19 @@ function SkillBar({ heading, topics, id }) {
     }
     ) || [];
 
+    let skillCardEl = null;
     return (
         <>
             <style jsx>
                 {allStyles}
             </style>
-            <div className={`skill-container ${colorMode === "dark" ? "dark" : null}`}
-                id={`skillbar-${id}`}>
+            <div
+                className={`skill-container ${colorMode === "dark" ? "dark" : null}`}
+                ref={el => skillCardEl = el}
+                id={`skillbar-${id}`}
+                onMouseMove={(event) => handleMouseMove(event, skillCardEl)}
+                onMouseLeave={() => handleMouseLeave(skillCardEl)}
+            >
                 <div className="skill-header">{heading}</div>
                 {topicsDisplay}
             </div>

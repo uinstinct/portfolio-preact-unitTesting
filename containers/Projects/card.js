@@ -8,8 +8,8 @@ import {
     Tag, TagLabel, TagRightIcon
 } from '@chakra-ui/core';
 
-import { glossColour, glossIcon } from "./constants"
 import { allStyles, itemStyles, bulletStyles } from "../../styles/card";
+import { glossColour, glossIcon } from "./constants";
 
 function Card({ sourceItems, links, stacks }) {
 
@@ -114,12 +114,13 @@ function Card({ sourceItems, links, stacks }) {
         );
     })
 
+
     return (
         <>
             <style jsx>
                 {allStyles}
             </style>
-            <div className={`card ${colorMode === "dark" ? "dark" : null}`}>
+            <div className={`card ${colorMode === "dark" ? "dark" : null}`} >
                 {items}
                 <div className="bullets" style={{ top: `calc(100%/${items.length})` }}>
                     <RadioGroup defaultValue="1" value={currentCard} >
