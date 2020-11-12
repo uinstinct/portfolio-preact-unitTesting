@@ -59,6 +59,11 @@ const allStyles = css`
   align-items: center;
   text-align: center;
 }
+@media screen and (max-width: 1082px){
+  .built-with {
+    font-size: 1.5em;
+  }
+}
 @media screen and (max-width: 350px) {
   .built-with {
     margin: 1.5rem 0;
@@ -83,7 +88,7 @@ const allStyles = css`
 }
 .built-with .built {
   display: block;
-  margin: 1rem;
+  margin: 0.25rem 1rem;
 }
 @media screen and (max-width: 590px){
   .built-with .built{

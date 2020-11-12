@@ -14,7 +14,7 @@ function Footer() {
         highlighter = document.createElement('span');
         highlighter.classList.add('highlight');
         highlighter.style.display = "block";
-        document.body.appendChild(highlighter);
+        document.body.append(highlighter);
     }, []);
 
     const highlightLink = event => {
@@ -51,7 +51,8 @@ function Footer() {
     });
 
     return (
-        <div id="find me">
+        <>
+            <span id="find me" style={{ display:"none" }} />
             <style jsx>
                 {styles}
             </style>
@@ -68,7 +69,7 @@ function Footer() {
                     </Link>
                 </div>
             </footer>
-        </div>
+        </>
     );
 }
 

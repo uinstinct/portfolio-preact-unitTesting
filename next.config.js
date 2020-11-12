@@ -11,8 +11,10 @@ module.exports = {
         domains: ["res.cloudinary.com"],
     },
     basePath: "",
-    i18n: {
-        locales: ['en'],
-        defaultLocale: 'en'
+    exportPathMap: async function (
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+    ) {
+        return { ...defaultPathMap, };
     },
 }
