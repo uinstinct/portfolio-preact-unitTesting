@@ -1,11 +1,15 @@
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     webpack: (config, { dev }) => {
-        config.optimization.minimize = isProduction;
+        if (isProduction) {
+            config.optimization.minimize = true;
+            config.plugins.push(new DuplicatePackageCheckerPlugin());
+        }
         return config;
     },
-    reactStrictMode: isProduction,
     images: {
         domains: ["res.cloudinary.com"],
     },
@@ -16,4 +20,5 @@ module.exports = {
     ) {
         return { ...defaultPathMap, };
     },
+    reactStrictMode: !isProduction,
 }
