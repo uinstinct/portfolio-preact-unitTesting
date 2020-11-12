@@ -16,6 +16,7 @@ export default css`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    will-change: bottom;
 
     animation-name: mount;
     animation-duration: 1.5s;
