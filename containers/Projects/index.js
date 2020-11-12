@@ -15,9 +15,9 @@ function Projects() {
     });
     return (
         <div
-            id="myProjects"
             onMouseEnter={showSwipeGuide}
         >
+            <h1 id="myProjects" className="container-header">My Projects</h1>
             {cards}
         </div>
     );

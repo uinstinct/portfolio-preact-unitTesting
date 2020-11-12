@@ -5,7 +5,8 @@ import styles from "../../styles/landing";
 
 function LandingContainer() {
     return (
-        <div id="pageLanding">
+        <>
+            <span id="pageLanding" style={{ display: "none" }} />
             <style jsx>
                 {styles}
             </style>
@@ -13,7 +14,7 @@ function LandingContainer() {
                 <Header />
                 <Navbar />
             </div>
-        </div>
+        </>
     );
 }
 

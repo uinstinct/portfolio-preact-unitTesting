@@ -1,9 +1,7 @@
-let skillCardTimer = null;
-
 export function handleMouseLeave(skillCardEl) {
-    skillCardTimer = setTimeout(() => {
+    setTimeout(() => {
         skillCardEl.style.transform = "none";
-    }, 250);
+    }, 650);
 }
 
 export function handleMouseMove(event, skillCardEl) {

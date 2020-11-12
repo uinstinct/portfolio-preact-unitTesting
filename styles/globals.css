@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400&family=Concert+One&family=Fira+Sans:wght@300&family=Josefin+Sans:wght@300&family=Righteous&family=Staatliches&family=Vampiro+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 @font-face {
     font-family: "ostrich-regular";
@@ -73,4 +74,10 @@ a {
 
 #all-containers{
     overflow-x: hidden;
+}
+
+.container-header {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1rem 0;
 }

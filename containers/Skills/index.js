@@ -11,14 +11,15 @@ function Skills() {
             id={idx}/>
     )
     return (
-        <div id="myTechSkills">
+        <>
+            <h1 id="myTechSkills" className="container-header">My Tech Skills</h1>
             <style jsx>
                 {styles}
             </style>
             <div className="skill-main-container">
                 {skillCards}
             </div>
-        </div>
+        </>
     );
 }
 

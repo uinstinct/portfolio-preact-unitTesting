@@ -63,7 +63,7 @@ function Footer() {
                 <div className="built-with">
                     <div className="border" />
                     My Portfolio Site Built With
-                    <Link isExternal href="https://github.com/aditya-mitra/portfolio/">
+                    <Link isExternal href="https://github.com/aditya-mitra/aditya-mitra.github.io/">
                         <span className="built">NextJS</span>
                     </Link>
                 </div>
