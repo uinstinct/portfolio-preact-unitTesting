@@ -2,12 +2,11 @@ import { useColorMode } from "@chakra-ui/core";
 
 import DeviceChange from "./deviceChange";
 import AboutMe from "./aboutMe";
-
 import constants from "./constants";
 
-import styles from "../../styles/aboutContainer";
+import styles from "@/styles/aboutContainer";
 
-function About() {
+export default function About() {
     const { colorMode } = useColorMode();
     return (
         <>
@@ -23,5 +22,3 @@ function About() {
         </>
     );
 }
-
-export default About;

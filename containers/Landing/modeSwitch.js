@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import { useColorMode } from "@chakra-ui/core";
 
-import { Tooltip } from "@chakra-ui/core";
-import styles from '../../styles/modeSwitch';
+import { Tooltip, useColorMode } from "@chakra-ui/core";
+import styles from '@/styles/modeSwitch';
 
-function ModeSwitch() {
+export default function ModeSwitch() {
     const { colorMode, toggleColorMode } = useColorMode();
     useEffect(() => {
         if (colorMode === "dark") {
@@ -35,5 +34,3 @@ function ModeSwitch() {
         </>
     );
 }
-
-export default ModeSwitch;

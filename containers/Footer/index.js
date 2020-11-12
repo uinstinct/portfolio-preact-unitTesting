@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import constants from "./constants";
 
 import {useColorMode, Link, Icon } from "@chakra-ui/core";
-import styles from "../../styles/footer";
+import styles from "@/styles/footer";
 
 
-function Footer() {
+export default function Footer() {
     const { colorMode } = useColorMode();
 
     useEffect(() => {
@@ -71,5 +71,3 @@ function Footer() {
         </>
     );
 }
-
-export default Footer;

@@ -2,7 +2,7 @@ import constants from "./constants";
 import Card from "./card";
 import { showSwipeGuide } from "./cardMouseMovements";
 
-function Projects() {
+export default function Projects() {
 
     let count = 1;
     const cards = constants.map((constant, idx) => {
@@ -15,12 +15,10 @@ function Projects() {
     });
     return (
         <div
-            onMouseEnter={showSwipeGuide}
+            onPointerEnter={showSwipeGuide}
         >
             <h1 id="myProjects" className="container-header">My Projects</h1>
             {cards}
         </div>
     );
 }
-
-export default Projects;

@@ -1,5 +1,6 @@
-import styles from "../../styles/deviceChange";
-function DeviceChange() {
+import styles from "@/styles/deviceChange";
+
+export default function DeviceChange() {
     return (
         <>
             <style jsx>
@@ -21,5 +22,3 @@ function DeviceChange() {
         </>
     );
 }
-
-export default DeviceChange;

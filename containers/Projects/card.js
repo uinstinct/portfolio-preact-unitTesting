@@ -10,10 +10,10 @@ import {
     Tag, TagLabel, TagRightIcon
 } from '@chakra-ui/core';
 
-import { allStyles, itemStyles, bulletStyles } from "../../styles/card";
+import { allStyles, itemStyles, bulletStyles } from "@/styles/card";
 import { glossColour, glossIcon } from "./constants";
 
-function Card({ sourceItems, links, stacks }) {
+export default function Card({ sourceItems, links, stacks }) {
 
     const { colorMode } = useColorMode();
     const uniqueMark = sourceItems[0].id;
@@ -162,5 +162,3 @@ function Card({ sourceItems, links, stacks }) {
         </>
     );
 }
-
-export default Card;

@@ -1,4 +1,4 @@
-import styles from "../../styles/progressBar";
+import styles from "@/styles/progressBar";
 
 const level = width => {
     if (width >= 0 && width <= 50) { return "rookie"; }
@@ -6,7 +6,7 @@ const level = width => {
     else { return "becoming expert";}
 }
 
-function ProgressBar({ progress }) {
+export default function ProgressBar({ progress }) {
     const width = progress;
     return (
         <>
@@ -21,5 +21,3 @@ function ProgressBar({ progress }) {
         </>
     );
 }
-
-export default ProgressBar;

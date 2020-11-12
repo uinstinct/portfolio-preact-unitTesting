@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import styles, { mouser } from '../../styles/header';
+import styles, { mouser } from '@/styles/header';
 
-function Header() {
+export default function Header() {
 
     const [isMounted, setMounted] = useState(false);
 
@@ -43,5 +43,3 @@ function Header() {
         </>
     );
 }
-
-export default Header;

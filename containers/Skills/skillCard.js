@@ -2,11 +2,11 @@ import ProgressBar from "./progressBar";
 import { glossIcon, glossColour } from "./constants";
 
 import { useColorMode, Icon } from "@chakra-ui/core";
-import { allStyles, topicStyles } from "../../styles/skillCard";
+import { allStyles, topicStyles } from "@/styles/skillCard";
 import { handleMouseMove, handleMouseLeave }
     from "./skillMouseMovements";
 
-function SkillBar({ heading, topics, id }) {
+export default function SkillBar({ heading, topics, id }) {
 
     const { colorMode } = useColorMode();
 
@@ -51,5 +51,3 @@ function SkillBar({ heading, topics, id }) {
         </>
     );
 };
-
-export default SkillBar;

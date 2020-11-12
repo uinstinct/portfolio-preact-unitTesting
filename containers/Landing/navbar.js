@@ -7,9 +7,9 @@ import {
     Button, Link,
     Menu, MenuButton, MenuList, MenuItem
 } from "@chakra-ui/core";
-import styles from "../../styles/navbar";
+import styles from "@/styles/navbar";
 
-function Navbar() {
+export default function Navbar() {
     const { colorMode } = useColorMode();
 
     useEffect(() => {
@@ -110,5 +110,3 @@ function Navbar() {
         </>
     );
 }
-
-export default Navbar;

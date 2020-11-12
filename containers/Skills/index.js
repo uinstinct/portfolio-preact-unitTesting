@@ -1,9 +1,9 @@
 import constants from "./constants";
 import SkillCards from "./skillCard";
 
-import styles from "../../styles/skillsContainer";
+import styles from "@/styles/skillsContainer";
 
-function Skills() {
+export default function Skills() {
 
     const skillCards = constants.map((constant, idx) =>
         <SkillCards key={idx}
@@ -22,5 +22,3 @@ function Skills() {
         </>
     );
 }
-
-export default Skills;

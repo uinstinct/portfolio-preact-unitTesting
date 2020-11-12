@@ -1,9 +1,9 @@
 import Header from './header';
 import Navbar from './navbar';
 
-import styles from "../../styles/landing";
+import styles from "@/styles/landing";
 
-function LandingContainer() {
+export default function LandingContainer() {
     return (
         <>
             <span id="pageLanding" style={{ visibility: "hidden" }} />
@@ -17,5 +17,3 @@ function LandingContainer() {
         </>
     );
 }
-
-export default LandingContainer;

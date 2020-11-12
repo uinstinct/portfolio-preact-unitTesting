@@ -2,9 +2,9 @@ import NextImage from 'next/image';
 
 import { useColorMode } from "@chakra-ui/core";
 
-import styles from "../../styles/aboutMe";
+import styles from "@/styles/aboutMe";
 
-function AboutMe({title, subTitle, description, image, status}) {
+export default function AboutMe({title, subTitle, description, image, status}) {
     const { colorMode } = useColorMode();
     return (
         <>
@@ -31,5 +31,3 @@ function AboutMe({title, subTitle, description, image, status}) {
         </>
     );
 }
-
-export default AboutMe;
