@@ -45,10 +45,10 @@ export function showSwipeGuide() {
             render: () => (
                 <Box
                     p={1} maxWidth="sm"
-                    color="white" bg="orange.400" opacity="0.95"
+                    color="white" bg="orange.400" opacity="0.9"
                     borderRadius="lg" textAlign="center"
                 >
-                    <pre>Hey, try swiping
+                    <pre style={{ fontFamily: "Fugaz One, cursive" }}>Hey, try swiping
                         <Icon as={GiSideswipe} margin="0 0.3rem" />
                         on my card!
                     </pre>

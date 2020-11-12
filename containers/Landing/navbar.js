@@ -101,6 +101,7 @@ function Navbar() {
                         <Link href="#myAbout"><MenuItem>Meet Me</MenuItem></Link>
                         <Link href="#myTechSkills"><MenuItem>Tools</MenuItem></Link>
                         <Link href="#myProjects"><MenuItem>Projects</MenuItem></Link>
+                        <Link href="#findMe"><MenuItem>Connect With Me</MenuItem></Link>
                         <Link href="#pageLanding"><MenuItem>Home</MenuItem></Link>
                     </MenuList>
                 </Menu>

@@ -9,9 +9,8 @@ import styles from "../../styles/footer";
 function Footer() {
     const { colorMode } = useColorMode();
 
-    let highlighter = null;
     useEffect(() => {
-        highlighter = document.createElement('span');
+        const highlighter = document.createElement('span');
         highlighter.classList.add('highlight');
         highlighter.style.display = "block";
         document.body.append(highlighter);
@@ -52,7 +51,7 @@ function Footer() {
 
     return (
         <>
-            <span id="find me" style={{ display:"none" }} />
+            <span id="findMe" style={{ visibility: "hidden" }} />
             <style jsx>
                 {styles}
             </style>

@@ -29,8 +29,8 @@ function ModeSwitch() {
                         className="l" id="modeSwitch"
                         type="checkbox"
                         checked={colorMode === "dark"}
-                        onChange={toggleColorMode} />.
-                    </div>
+                        onChange={toggleColorMode} />
+                </div>
             </Tooltip>
         </>
     );
