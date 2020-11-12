@@ -1,5 +1,7 @@
 ## Aditya Mitra's Portfolio
 
+Preact Site deployed on [https://aditya-mitra-portfolio-preact.netlify.app/](https://aditya-mitra-portfolio-preact.netlify.app/)
+
 Built with @[Next.JS](https://nextjs.org/)
 
 **Live on**
