@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/core';
@@ -6,6 +7,15 @@ import { ChakraProvider } from '@chakra-ui/core';
 import theme from "../styles/themes/theme";
 
 function MyApp({ Component, pageProps }) {
+
+    useEffect(() => {
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register("/serviceWorker.js")
+                    .catch(err => console.log("service worker not supported"))
+            });
+        }
+    }, []);
 
     return (
         <>

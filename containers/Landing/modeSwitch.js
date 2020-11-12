@@ -18,22 +18,20 @@ function ModeSwitch() {
             <style jsx>
                 {styles}
             </style>
-            <label for="modeSwitch">
-                <Tooltip
-                    label={`click to change to ${colorMode === "dark" ? "dark" : "light"} mode`}
-                    hasArrow
-                    bg={colorMode === "dark" ? "white" : "black"}
-                    color={colorMode === "dark" ? "black" : "white"}
-                >
-                    <div className="container">
-                        <input
-                            className="l" id="modeSwitch"
-                            type="checkbox"
-                            checked={colorMode === "dark"}
-                            onChange={toggleColorMode} />
+            <Tooltip
+                label={`click to change to ${colorMode === "dark" ? "dark" : "light"} mode`}
+                hasArrow
+                bg={colorMode === "dark" ? "white" : "black"}
+                color={colorMode === "dark" ? "black" : "white"}
+            >
+                <div className="container">
+                    <input
+                        className="l" id="modeSwitch"
+                        type="checkbox"
+                        checked={colorMode === "dark"}
+                        onChange={toggleColorMode} />.
                     </div>
-                </Tooltip>
-            </label>
+            </Tooltip>
         </>
     );
 }
