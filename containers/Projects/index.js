@@ -15,7 +15,7 @@ export default function Projects() {
     });
     return (
         <div
-            onPointerEnter={showSwipeGuide}
+            onMouseEnter={showSwipeGuide}
         >
             <h1 id="myProjects" className="container-header">My Projects</h1>
             {cards}

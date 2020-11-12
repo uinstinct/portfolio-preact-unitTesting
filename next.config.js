@@ -2,9 +2,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     webpack: (config, { dev }) => {
-        config.optimization.minimize = isProduction ? true : false;
+        config.optimization.minimize = isProduction;
         return config;
     },
+    reactStrictMode: isProduction,
     images: {
         domains: ["res.cloudinary.com"],
     },

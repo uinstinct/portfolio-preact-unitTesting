@@ -30,7 +30,7 @@ export default function Header() {
             <div className="container">
                 <div className="box">
                     <div className="title">
-                        <span className="block"></span>
+                        <span className="block" />
                         <h1>Aditya Mitra<span /></h1>
                     </div>
                     <div className="role">
