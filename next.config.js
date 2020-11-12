@@ -1,11 +1,16 @@
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+const withPreact = require('next-plugin-preact')
+
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = {
+module.exports = withPreact({
     webpack: (config, { dev }) => {
-        config.optimization.minimize = isProduction;
+        if (isProduction) {
+            config.optimization.minimize = isProduction;
+            config.plugins.push(new DuplicatePackageCheckerPlugin());
+        }
         return config;
     },
-    reactStrictMode: isProduction,
     images: {
         domains: ["res.cloudinary.com"],
     },
@@ -16,4 +21,5 @@ module.exports = {
     ) {
         return { ...defaultPathMap, };
     },
-}
+    reactStrictMode: !isProduction,
+});
