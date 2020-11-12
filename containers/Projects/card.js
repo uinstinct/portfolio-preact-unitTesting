@@ -62,7 +62,7 @@ function Card({ sourceItems, links, stacks }) {
                         <div className="imageContainer">
                             <img
                                 src={sourceItem.imgSrc} alt={sourceItem.title}
-                                loading="lazy"
+                                loading="lazy" height="300" width="300"
                             />
                         </div>
                         <div className="content">

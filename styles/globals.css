@@ -10,11 +10,13 @@
 @font-face {
     font-family: "ostrich-light";
     src: url("/fonts/ostrich-light.otf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "guildof";
     src: url("/fonts/guildof.ttf");
+    font-display: swap;
 }
 
 * {
