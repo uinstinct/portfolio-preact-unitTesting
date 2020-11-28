@@ -75,7 +75,11 @@ export default function Navbar() {
             <style jsx>
                 {styles}
             </style>
-            <nav className="navbar" id="navbar">
+            <nav
+                className="navbar"
+                style={{ backgroundColor: colorMode === "dark" ? "#2eb82e" : "#00cc00" }}
+                id="navbar"
+            >
                 <Menu
                     transition="all 1s linear"
                     borderRadius="md"

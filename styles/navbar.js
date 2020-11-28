@@ -2,7 +2,6 @@ import css from "styled-jsx/css";
 
 export default css`
 .navbar {
-    background-color: forestgreen;
     color: white;
     font-size: 2rem;
 

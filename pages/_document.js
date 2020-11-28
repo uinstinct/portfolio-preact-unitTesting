@@ -4,7 +4,7 @@ import { ColorModeScript } from "@chakra-ui/react"
 
 class MyDocument extends NextDocument {
     static async getInitialProps(ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
+        const initialProps = await NextDocument.getInitialProps(ctx)
         return { ...initialProps }
     }
 
