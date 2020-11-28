@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useColorMode, LightMode } from "@chakra-ui/react";
 
 import {
@@ -9,9 +9,7 @@ import {
     LinkButtons, StackTags, CardItems, RadioBullets
 } from './cardComponents';
 
-import {
-    RadioGroup,
-} from '@chakra-ui/react';
+import { RadioGroup } from '@chakra-ui/react';
 
 import { allStyles } from "@/styles/card";
 
@@ -19,33 +17,37 @@ import { allStyles } from "@/styles/card";
 export default function Card({ sourceItems, links, stacks }) {
 
     const { colorMode } = useColorMode();
+    const containerRef = useRef(null);
 
     const uniqueMark = sourceItems[0].id;
     const [currentItem, setCurrentItem] = useState(uniqueMark);
     const totalItems = sourceItems.length;
 
     const displayCard = event => {
-        const preItem = document.getElementById(`item${currentItem}`);
+        const container = containerRef.current;
+        const preItem = container.querySelector(`#item${currentItem}`);
         preItem.classList.remove("visible");
-        const preTap = document.getElementById(`tap${currentItem}`);
+        const preTap = container.querySelector(`#tap${currentItem}`);
         preTap.classList.remove("checked");
         setCurrentItem(parseInt(event.target.value));
     }
 
     useEffect(() => {
-        const item = document.getElementById(`item${currentItem}`);
+        const container = containerRef.current;
+        const item = container.querySelector(`#item${currentItem}`);
         item.classList.add("visible");
         if (totalItems > 1) {
-            const tap = document.getElementById(`tap${currentItem}`);
+            const tap = container.querySelector(`#tap${currentItem}`);
             tap.classList.add("checked");
         }
     }, [currentItem]);
 
     useEffect(() => {
-        const item = document.getElementById(`item${uniqueMark}`);
+        const container = containerRef.current;
+        const item = container.querySelector(`#item${uniqueMark}`);
         item.classList.add("visible");
         if (totalItems > 1) {
-            const tap = document.getElementById(`tap${uniqueMark}`);
+            const tap = container.querySelector(`#tap${uniqueMark}`);
             tap.classList.add("checked");
         }
     }, []);
@@ -62,6 +64,7 @@ export default function Card({ sourceItems, links, stacks }) {
             </style>
             <div
                 className={`card ${colorMode === "dark" ? "dark" : null}`}
+                ref={containerRef}
 
                 onMouseDown={(event) => handleDragStart(event, totalItems)}
                 onMouseMove={(event) =>
