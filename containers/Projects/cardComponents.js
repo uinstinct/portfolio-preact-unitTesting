@@ -5,6 +5,7 @@ import {
 
 import { glossColour, glossIcon } from "./constants";
 
+import styles from '@/styles/extras.module.css';
 import { itemStyles, bulletStyles } from '@/styles/card';
 
 
@@ -37,6 +38,7 @@ export const StackTags = (stacks) =>
             <Tag
                 key={idx} colorScheme={colour}
                 rounded="full" variant="solid"
+                className={styles.tag}
             >
                 <TagLabel>{stack}</TagLabel>
                 <TagRightIcon as={icon} />
@@ -75,24 +77,24 @@ export const CardItems = (sourceItems, colorMode, uniqueMark) =>
 
 export const RadioBullets =
     (sourceItems, uniqueMark, currentItem, totalItems, displayCard) =>
-    totalItems > 1 ? sourceItems.map((sourceItem, idx) => {
-        const { id } = sourceItem;
-        return (
-            <div key={idx}>
-                <style jsx>
-                    {bulletStyles}
-                </style>
-                <label
-                    htmlFor={`tapInput${id}`} id={`tap${id}`}
-                    className="tap tap-${uniqueMark}"
-                >
-                    <input type="radio" id={`tapInput${id}`}
-                        value={id}
-                        checked={id === currentItem}
-                        onChange={displayCard}
-                    />
-                </label>
-            </div>
-        );
-    })
-        : null;
+        totalItems > 1 ? sourceItems.map((sourceItem, idx) => {
+            const { id } = sourceItem;
+            return (
+                <div key={idx}>
+                    <style jsx>
+                        {bulletStyles}
+                    </style>
+                    <label
+                        htmlFor={`tapInput${id}`} id={`tap${id}`}
+                        className="tap tap-${uniqueMark}"
+                    >
+                        <input type="radio" id={`tapInput${id}`}
+                            value={id}
+                            checked={id === currentItem}
+                            onChange={displayCard}
+                        />
+                    </label>
+                </div>
+            );
+        })
+            : null;
