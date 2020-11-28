@@ -62,29 +62,24 @@ export function handleTouchEnd(
 }
 
 
-let shown = false;
 export async function showSwipeGuide() {
-    if (!shown) {
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        const toast = createStandaloneToast();
-        toast({
-            position: "bottom-left",
-            render: () => (
-                <Box
-                    p={1} maxWidth="sm"
-                    color="white" bg="orange.400" opacity="0.9"
-                    borderRadius="lg" textAlign="center"
-                >
-                    <pre style={{ fontFamily: "Fugaz One, cursive" }}>Hey, try swiping
-                        <Icon as={GiSideswipe} margin="0 0.3rem" />
-                        on my card!
-                    </pre>
-                </Box>
-            ),
-            duration: 5000,
-        });
 
-        shown = true;
-    }
-
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    const toast = createStandaloneToast();
+    toast({
+        position: "bottom-left",
+        render: () => (
+            <Box
+                p={1} maxWidth="sm"
+                color="white" bg="orange.400" opacity="0.9"
+                borderRadius="lg" textAlign="center"
+            >
+                <pre style={{ fontFamily: "Fugaz One, cursive" }}>Hey, try swiping
+                    <Icon as={GiSideswipe} margin="0 0.3rem" />
+                    on my card!
+                </pre>
+            </Box>
+        ),
+        duration: 5000,
+    });
 }
