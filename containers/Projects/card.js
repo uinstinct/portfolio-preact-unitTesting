@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { useColorMode, LightMode } from "@chakra-ui/react";
-import { handleDragStart, handleDrag, handleDragEnd }
+import {
+    handleDragStart, handleDrag, handleDragEnd,
+    handleTouchStart, handleTouchEnd
+}
     from "./cardMouseMovements";
 
 import {
@@ -130,14 +133,23 @@ export default function Card({ sourceItems, links, stacks }) {
             </style>
             <div
                 className={`card ${colorMode === "dark" ? "dark" : null}`}
-                onPointerDown={(event) => handleDragStart(event, totalItems)}
-                onPointerMove={(event) =>
+
+                onMouseDown={(event) => handleDragStart(event, totalItems)}
+                onMouseMove={(event) =>
                     handleDrag(
                         event, uniqueMark, totalItems,
                         currentItem, displayCard
                     )
                 }
-                onPointerUp={() => handleDragEnd()}
+                onMouseUp={() => handleDragEnd()}
+
+                onTouchStart={(event) => handleTouchStart(event)}
+                onTouchEnd={(event) =>
+                    handleTouchEnd(
+                        event, uniqueMark, totalItems,
+                        currentItem, displayCard
+                    )
+                }
             >
                 {items}
                 <div className="bullets"

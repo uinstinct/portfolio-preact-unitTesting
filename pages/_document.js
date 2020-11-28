@@ -1,8 +1,8 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 import { ColorModeScript } from "@chakra-ui/react"
 
 
-class MyDocument extends Document {
+class MyDocument extends NextDocument {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
         return { ...initialProps }

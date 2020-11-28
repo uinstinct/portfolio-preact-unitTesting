@@ -3,6 +3,13 @@ import { GiSideswipe } from "react-icons/gi";
 
 let willDrag = false;
 let originalPosX = 0;
+
+function changeCard(displayCard, value) {
+    const event = { target: { value } };
+    displayCard(event);
+    willDrag = false;
+}
+
 export function handleDragStart(event, totalItems) {
     if (totalItems > 1) {
         willDrag = true;
@@ -15,24 +22,43 @@ export function handleDrag(
     currentItem, displayCard
 ) {
     if (willDrag) {
-        const shiftX = event.nativeEvent.pageX - originalPosX;
+        const moveX = event.nativeEvent.pageX
+        const shiftX = moveX - originalPosX;
 
         const relativeCurrent = currentItem - uniqueMark;
         if (shiftX < -50 && relativeCurrent < totalItems - 1) {
-            const event = { target: { value: currentItem + 1 } };
-            displayCard(event);
-            willDrag = false;
+            changeCard(displayCard, currentItem + 1);
         } else if (shiftX > 50 && relativeCurrent > 0) {
-            const event = { target: { value: currentItem - 1 } };
-            displayCard(event);
-            willDrag = false;
-        }
+            changeCard(displayCard, currentItem - 1);
+        }        
 
     }
 }
 
 export function handleDragEnd() {
     willDrag = false;
+}
+
+export function handleTouchStart(event) {
+    const { touches } = event;
+    if (touches && touches.length === 1) {
+        originalPosX = touches[0].clientX;
+    }
+}
+
+export function handleTouchEnd(
+    event, uniqueMark, totalItems,
+    currentItem, displayCard
+) {
+    const endX = event.changedTouches[0].clientX;
+    const shiftX = endX - originalPosX;
+
+    const relativeCurrent = currentItem - uniqueMark;
+    if (shiftX < -100 && relativeCurrent < totalItems - 1) {
+        changeCard(displayCard, currentItem + 1);
+    } else if (shiftX > 100 && relativeCurrent > 0) {
+        changeCard(displayCard, currentItem - 1);
+    }
 }
 
 
