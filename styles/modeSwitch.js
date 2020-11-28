@@ -4,6 +4,7 @@ export default css`
 input {
   display: block;
   margin-bottom: 1.5em;
+  cursor: pointer;
 }
 .container {
   text-align: center;

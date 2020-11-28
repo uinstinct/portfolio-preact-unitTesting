@@ -63,8 +63,9 @@ export function handleTouchEnd(
 
 
 let shown = false;
-export function showSwipeGuide() {
+export async function showSwipeGuide() {
     if (!shown) {
+        await new Promise(resolve => setTimeout(resolve, 2000));
         const toast = createStandaloneToast();
         toast({
             position: "bottom-left",
