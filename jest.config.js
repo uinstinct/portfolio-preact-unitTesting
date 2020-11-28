@@ -7,8 +7,5 @@ module.exports = {
     },
     setupFilesAfterEnv: ["<rootDir>/tests/setupTests.js"],
     testTimeout: 7000,
-    transform: {
-        "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
-    },
     verbose: false,
 };

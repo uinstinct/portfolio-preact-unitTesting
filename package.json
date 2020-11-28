@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "deploy": "cross-env NODE_ENV=production && next build && next export -o portfolio",
-        "test": "jest --env=jest-environment-jsdom-sixteen"
+        "test": "jest --env=jest-environment-jsdom-sixteen --watch"
     },
     "dependencies": {
         "@chakra-ui/react": "^1.0.1",
