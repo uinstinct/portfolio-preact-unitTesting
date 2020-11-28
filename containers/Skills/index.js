@@ -6,12 +6,12 @@ import SkillCards from "./skillCard";
 import styles from "@/styles/skillsContainer";
 
 function handleInView(entries, container, hasShown, observer) {
-    if (entries[0].isIntersecting && !hasShown.current) {
+    if (entries[0].isIntersecting && !hasShown) {
         const progresses = container.getElementsByClassName("bar");
         [].forEach.call(progresses, (progress) => {
             progress.classList.remove("inactive");
         });
-        hasShown.current = true;
+        hasShown = true;
         observer.disconnect();
     }
 }
@@ -25,24 +25,24 @@ export default function Skills() {
         />
     )
 
-    const skillMainContainerRef = useRef(null);
-    const hasShown = useRef(false);
+    const containerRef = useRef(null);
 
     useEffect(() => {   
 
-        const container = skillMainContainerRef.current;
+        const container = containerRef.current;
 
         const progresses = container.getElementsByClassName("bar");
         [].forEach.call(progresses, (progress) => {
             progress.classList.add("inactive");
         });
 
+        let hasShown = false;
         const observer = new IntersectionObserver(
             (entries) => handleInView(entries, container, hasShown, observer),
             {
                 root: null,
                 rootMargin: '0px',
-                threshold: 1.0,
+                threshold: 1.0
             });
 
         observer.observe(container);
@@ -56,7 +56,7 @@ export default function Skills() {
             </style>
             <div
                 className="skill-main-container"
-                ref={skillMainContainerRef}
+                ref={containerRef}
             >
                 {skillCards}
             </div>

@@ -31,7 +31,7 @@ export default css`
     }
 }
 
-.fixNavbar{
+.fixed-navbar{
     top: 0;
     margin-top: 0;
     position: fixed;

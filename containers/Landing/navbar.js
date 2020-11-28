@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import ModeSwitch from './modeSwitch';
 
 import {
@@ -9,32 +7,9 @@ import {
 } from "@chakra-ui/react";
 import styles from "@/styles/navbar";
 
+
 export default function Navbar() {
     const { colorMode } = useColorMode();
-
-    useEffect(() => {
-        const nav = document.querySelector("#navbar");
-        var topOfNav = nav.offsetTop;
-
-        function fixNav() {
-            if (window.scrollY >= topOfNav) {
-                nav.classList.add("fixNavbar");
-            }
-            else {
-                nav.classList.remove("fixNavbar");
-            }
-        }
-
-        function scrollEvents() {
-            clearTimeout(window.navTimer);
-            window.navTimer = setTimeout(() => { // otherwise scroll is lagging
-                fixNav();
-            }, 1000);
-        }
-
-        window.addEventListener('scroll', scrollEvents);
-    }, []);
-
 
     return (
         <>
@@ -42,7 +17,7 @@ export default function Navbar() {
                 {styles}
             </style>
             <nav
-                className="navbar"
+                className="navbar fixed-navbar"
                 style={{ backgroundColor: colorMode === "dark" ? "#2eb82e" : "#00cc00" }}
                 id="navbar"
             >
