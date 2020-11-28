@@ -1,8 +1,14 @@
-.tag{
+.tag {
     will-change: transform;
     transition: transform 0.6s;
 }
-.tag:hover{
-    transform: scale(1.15);
-    z-index: 99;
+
+    .tag:hover {
+        transform: scale(1.15);
+        z-index: 99;
+    }
+
+.scaleOut {
+    transform: scale(1) !important;
+    transition: transform 1s linear;
 }

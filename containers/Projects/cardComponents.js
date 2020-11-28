@@ -5,7 +5,7 @@ import {
 
 import { glossColour, glossIcon } from "./constants";
 
-import styles from '@/styles/extras.module.css';
+import { tag as tagClass } from '@/styles/extras.module.css';
 import { itemStyles, bulletStyles } from '@/styles/card';
 
 
@@ -38,7 +38,7 @@ export const StackTags = (stacks) =>
             <Tag
                 key={idx} colorScheme={colour}
                 rounded="full" variant="solid"
-                className={styles.tag}
+                className={tagClass}
             >
                 <TagLabel>{stack}</TagLabel>
                 <TagRightIcon as={icon} />

@@ -2,6 +2,7 @@ import css from "styled-jsx/css";
 
 const allStyles = css`
 .card {
+  transform: scale(0.9);
   width: 95%;
   position: relative;
   max-width: 800px;
@@ -11,7 +12,6 @@ const allStyles = css`
   padding: 25px;
   border-radius: 25px;
   height: 400px;
-  transition: all 0.3s;
   cursor: pointer;
   user-select: none;
 }

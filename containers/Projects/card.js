@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { useColorMode, LightMode } from "@chakra-ui/react";
 
 import {
     handleDragStart, handleDrag, handleDragEnd,
@@ -9,9 +8,13 @@ import {
     LinkButtons, StackTags, CardItems, RadioBullets
 } from './cardComponents';
 
-import { RadioGroup } from '@chakra-ui/react';
+import {
+    useColorMode, LightMode,
+    RadioGroup,
+} from '@chakra-ui/react';
 
 import { allStyles } from "@/styles/card";
+import { scaleOut as scaleClass } from '@/styles/extras.module.css';
 
 
 export default function Card({ sourceItems, links, stacks }) {
@@ -44,6 +47,20 @@ export default function Card({ sourceItems, links, stacks }) {
 
     useEffect(() => {
         const container = containerRef.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    container.classList.add(scaleClass);
+                    observer.disconnect();
+                }
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.8
+            });
+        observer.observe(container);
         const item = container.querySelector(`#item${uniqueMark}`);
         item.classList.add("visible");
         if (totalItems > 1) {
