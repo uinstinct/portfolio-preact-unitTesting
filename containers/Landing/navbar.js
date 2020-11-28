@@ -77,7 +77,6 @@ export default function Navbar() {
             </style>
             <nav className="navbar" id="navbar">
                 <Menu
-                    isLazy
                     transition="all 1s linear"
                     borderRadius="md"
                     borderWidth="none"

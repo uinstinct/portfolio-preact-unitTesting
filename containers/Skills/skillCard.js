@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import ProgressBar from "./progressBar";
 import { glossIcon, glossColour } from "./constants";
 
@@ -32,7 +34,7 @@ export default function SkillBar({ heading, topics, id }) {
     }
     ) || [];
 
-    let skillCardEl = null;
+    const skillCardRef = useRef(null);
     return (
         <>
             <style jsx>
@@ -40,10 +42,11 @@ export default function SkillBar({ heading, topics, id }) {
             </style>
             <div
                 className={`skill-container ${colorMode === "dark" ? "dark" : null}`}
-                ref={el => skillCardEl = el}
                 id={`skillbar-${id}`}
-                onMouseMove={(event) => handleMouseMove(event, skillCardEl)}
-                onMouseLeave={() => handleMouseLeave(skillCardEl)}
+                ref={skillCardRef}
+                onMouseMove={(event) =>
+                    handleMouseMove(event, skillCardRef.current)}
+                onMouseLeave={() => handleMouseLeave(skillCardRef.current)}
             >
                 <div className="skill-header">{heading}</div>
                 {topicsDisplay}

@@ -81,7 +81,7 @@ export async function showSwipeGuide() {
                     </pre>
                 </Box>
             ),
-            duration: 7500,
+            duration: 5000,
         });
 
         shown = true;
