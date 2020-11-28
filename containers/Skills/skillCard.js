@@ -34,7 +34,7 @@ export default function SkillBar({ heading, topics, id }) {
     }
     ) || [];
 
-    const skillCardRef = useRef(null);
+    const containerRef = useRef(null);
     return (
         <>
             <style jsx>
@@ -43,10 +43,10 @@ export default function SkillBar({ heading, topics, id }) {
             <div
                 className={`skill-container ${colorMode === "dark" ? "dark" : null}`}
                 id={`skillbar-${id}`}
-                ref={skillCardRef}
+                ref={containerRef}
                 onMouseMove={(event) =>
-                    handleMouseMove(event, skillCardRef.current)}
-                onMouseLeave={() => handleMouseLeave(skillCardRef.current)}
+                    handleMouseMove(event, containerRef.current)}
+                onMouseLeave={() => handleMouseLeave(containerRef.current)}
             >
                 <div className="skill-header">{heading}</div>
                 {topicsDisplay}

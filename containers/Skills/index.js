@@ -28,7 +28,6 @@ export default function Skills() {
     const containerRef = useRef(null);
 
     useEffect(() => {   
-
         const container = containerRef.current;
 
         const progresses = container.getElementsByClassName("bar");
@@ -45,7 +44,8 @@ export default function Skills() {
                 threshold: 1.0
             });
 
-        observer.observe(container);
+        const firstSkillCard = container.querySelector('.skill-container');
+        observer.observe(firstSkillCard);
     }, []);
 
     return (
