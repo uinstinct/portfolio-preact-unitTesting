@@ -6,7 +6,7 @@ import {
     useColorMode,
     Button, Link,
     Menu, MenuButton, MenuList, MenuItem
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import styles from "@/styles/navbar";
 
 export default function Navbar() {

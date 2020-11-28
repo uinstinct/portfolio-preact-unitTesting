@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import constants from "./constants";
 
-import {useColorMode, Link, Icon } from "@chakra-ui/core";
+import {useColorMode, Link, Icon } from "@chakra-ui/react";
 import styles from "@/styles/footer";
 
 

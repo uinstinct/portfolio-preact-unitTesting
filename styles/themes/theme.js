@@ -1,33 +1,13 @@
-import { extendTheme } from '@chakra-ui/core';
-import { mode } from '@chakra-ui/theme-tools';
+import { extendTheme } from '@chakra-ui/react';
 
-const styles = {
-    global: (props) => ({
-        body: {
-            bg: mode('white', 'black')(props),
-            color: mode('black', 'white')(props),
-        },
-    })
+const config = {
+    useSystemColorMode: false,
+    initialColorMode: "light",
 };
 
-const components = {
-    Link: {
-        baseStyle: (props) => ({
-            color: mode('blue.400', 'blue.300')(props),
-            textDecoration: "10px solid red",
-        }),
-        variants: {
-            outline: {
-                border: "0",
-                borderColor: "none",
-            },
-        }
-    },
-};
 
 const theme = extendTheme({
-    styles,
-    components,
+    config,
 });
 
 export default theme;

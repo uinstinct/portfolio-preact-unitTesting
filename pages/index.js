@@ -1,5 +1,3 @@
-import { SSRTheme } from "@/styles/themes/serverTheme";
-
 import Landing from "@/containers/Landing";
 import About from "@/containers/About";
 import Skills from "@/containers/Skills";
@@ -10,21 +8,17 @@ export default function IndexPage() {
 
     return (
         <>
-            <SSRTheme>
-                <div
-                    id="all-containers"
-                >
-                    <Landing />
-                    <div>
-                        <About />
-                    </div>
-                    <Skills />
-                    <Cards />
-                    <Footer />
+            <div
+                id="all-containers"
+            >
+                <Landing />
+                <div>
+                    <About />
                 </div>
-            </SSRTheme>
+                <Skills />
+                <Cards />
+                <Footer />
+            </div>
         </>
     );
 }
-
-export { getStaticProps } from "@/styles/themes/serverTheme";

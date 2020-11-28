@@ -1,7 +1,7 @@
 import ProgressBar from "./progressBar";
 import { glossIcon, glossColour } from "./constants";
 
-import { useColorMode, Icon } from "@chakra-ui/core";
+import { useColorMode, Icon } from "@chakra-ui/react";
 import { allStyles, topicStyles } from "@/styles/skillCard";
 import { handleMouseMove, handleMouseLeave }
     from "./skillMouseMovements";

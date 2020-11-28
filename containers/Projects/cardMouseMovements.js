@@ -1,4 +1,4 @@
-import { createStandaloneToast, Box, Icon } from "@chakra-ui/core";
+import { createStandaloneToast, Box, Icon } from "@chakra-ui/react";
 import { GiSideswipe } from "react-icons/gi";
 
 let willDrag = false;

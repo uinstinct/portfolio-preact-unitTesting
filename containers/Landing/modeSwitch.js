@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { Tooltip, useColorMode } from "@chakra-ui/core";
+import { Tooltip, useColorMode } from "@chakra-ui/react";
 import styles from '@/styles/modeSwitch';
 
 export default function ModeSwitch() {

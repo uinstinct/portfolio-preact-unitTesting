@@ -1,6 +1,4 @@
-import NextImage from 'next/image';
-
-import { useColorMode } from "@chakra-ui/core";
+import { useColorMode } from "@chakra-ui/react";
 
 import styles from "@/styles/aboutMe";
 

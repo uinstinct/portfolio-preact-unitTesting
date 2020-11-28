@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { useColorMode, LightMode } from "@chakra-ui/core";
-import NextImage from "next/image";
+import { useColorMode, LightMode } from "@chakra-ui/react";
 import { handleDragStart, handleDrag, handleDragEnd }
     from "./cardMouseMovements";
 
@@ -8,7 +7,7 @@ import {
     RadioGroup,
     Icon, IconButton, Link,
     Tag, TagLabel, TagRightIcon
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import { allStyles, itemStyles, bulletStyles } from "@/styles/card";
 import { glossColour, glossIcon } from "./constants";
