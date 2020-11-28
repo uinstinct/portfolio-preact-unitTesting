@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 
-import ProgressBar from "./progressBar";
-import { glossIcon, glossColour } from "./constants";
-
 import { useColorMode, Icon } from "@chakra-ui/react";
 import { allStyles, topicStyles } from "@/styles/skillCard";
+
+import ProgressBar from "./progressBar";
 import { handleMouseMove, handleMouseLeave }
     from "./skillMouseMovements";
+import { glossIcon, glossColour } from "./constants";
 
 export default function SkillBar({ heading, topics, id }) {
 
