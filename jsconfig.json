@@ -3,8 +3,9 @@
         "baseUrl": ".",
         "paths": {
             "@/containers/*": [ "containers/*" ],
+            "@/pages/*": [ "pages/*" ],
             "@/styles/*": ["styles/*"],
-            "@/pages/*": [ "pages/*" ]
+            "@/tests/*": [ "tests/*" ]
         }
     },
     "exclude": ["node_modules",".next"]
