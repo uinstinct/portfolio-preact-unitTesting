@@ -17,10 +17,11 @@ const DarkModeProvider = ({ children }) => (
     </ChakraProvider>
 );
 
-export const resizeWindow = (x = 900, y = 768) => {
+export const resizeWindow = (window, x = 1024, y = 768) => {
     window.innerWidth = x;
     window.innerHeight = y;
     window.dispatchEvent(new Event('resize'));
+    return window;
 }
 
 export const customRender = (ui, options = {}, theme = 'light') => (
