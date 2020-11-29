@@ -1,16 +1,5 @@
 ## Aditya Mitra's Portfolio
 
-Built with @[Next.JS](https://nextjs.org/)
+**Unit Tests and Integration Tests with Jest.**
 
-**Live on**
-
-[GitHub Pages](https://aditya-mitra.github.io/)
-
-[Netlify](https://aditya-mitra.netlify.app/)
-
-
-Deployment configured using *github actions*.
-
-### Notes
-
-- All **content** that might appear to change are put in file named `constants.js`.
+Does not cover most of the functionalities as referred in here - https://github.com/aditya-mitra/aditya-mitra.github.io/projects/2#card-50233361
